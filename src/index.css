@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    @apply text-[16px] lg:text-[12px] 2xl:text-[16px]
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', 'Courier New', Courier, monospace;
+}
+
+.login-form > svg{
+    @apply scale-100 lg:scale-75 2xl:scale-100
+}
