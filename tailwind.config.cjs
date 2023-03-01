@@ -14,6 +14,7 @@ module.exports = {
         'yellow-400': '#FBC948',
         'orange-400': '#F9A824',
         'orange-500': '#F47F17', //navbar
+        'gray-footer': '#1B1B1B'
       },
     },
   },

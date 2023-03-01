@@ -1,4 +1,4 @@
-import { logo_text } from "../../assets"
+import { logo_text } from "@/assets"
 import { NavLink } from "react-router-dom"
 
 const Navbar = () => {

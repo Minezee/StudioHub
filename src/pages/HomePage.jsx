@@ -1,6 +1,6 @@
-import Container from "../components/layouts/Container";
-import Slider from "../components/Home/Slider";
-import Layout from "../components/layouts/Layout";
+import Container from "@/components/layouts/Container";
+import Slider from "@/components/Home/Slider";
+import Layout from "@/components/layouts/Layout";
 
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote, MdHomeFilled } from "react-icons/md"
