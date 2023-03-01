@@ -1,4 +1,5 @@
 import { logo_text } from "../../assets"
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
     return (
@@ -11,7 +12,7 @@ const Navbar = () => {
                 <div>Event</div>
                 <div>Profile</div>
             </div>
-            <button className='px-4 py-2 bg-orange-400'>Login</button>
+            <NavLink to="/login" className='px-4 py-2 bg-orange-400'>Login</NavLink>
         </div>
     )
 }
