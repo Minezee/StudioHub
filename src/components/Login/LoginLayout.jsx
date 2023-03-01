@@ -1,5 +1,5 @@
 import Container from "../layouts/Container"
-import styles from "@/styles/styles.module.css"
+import styles from "@/styles/Auth.module.css"
 
 const LoginLayout = ({ children }) => {
     return (

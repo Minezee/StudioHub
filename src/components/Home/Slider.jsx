@@ -9,9 +9,12 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
+import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
+import { event_banner } from "@/assets";
+import styles from "@/styles/Slider.module.css"
 
 const Slider = () => {
-    let arr = ["Budi", "Rudi", "Reza", "Faris", "Dede", "Aan"]
+    let arr = ["1", "2", "3", "4", "5", "6"]
     const swiperRef = useRef(null);
 
     const handleNextClick = () => {
@@ -38,24 +41,25 @@ const Slider = () => {
                 }}
                 modules={[Pagination, Navigation, Autoplay]}
                 style={{
-                    "--swiper-navigation-color": "black",
-                    "--swiper-navigation-size": "20px",
-                    "--swiper-navigation-height": "100%",
-                    "--swiper-pagination-bullet-size": "8px",
-                    "--swiper-pagination-color": "white",
+                    "--swiper-pagination-bullet-size": "12px",
+                    "--swiper-pagination-color": "rgba(251, 193, 46)",
+                    "--swiper-pagination-bullet-inactive-color": "rgba(252, 216, 124)",
+                    "--swiper-pagination-bullet-inactive-opacity": "0.75",
                 }}
-                className="mySwiper bg-gray-400 h-[500px] relative"
+                className="mySwiper relative text-white"
             >
-                <button id="prev-btn" className="absolute top-1/2 z-20" onClick={handlePrevClick}>
-                    {"<"}
+                <button id="prev-btn" className={`${styles.btn} left-8`} onClick={handlePrevClick}>
+                    <BsArrowLeftShort className="m-2"/>
                 </button>
+                {/* Slide */}
                 {arr.map(name => (
                     <SwiperSlide key={name}>
-                        <div className="flex items-center justify-center h-full z-10">{name}</div>
+                        <img className="h-auto w-full z-10" src={event_banner} alt="" />
                     </SwiperSlide>
                 ))}
-                <button id="next-btn" className="absolute top-1/2 right-0 z-20" onClick={handleNextClick}>
-                    Next
+                {/* Slide */}
+                <button id="next-btn" className={`${styles.btn} right-8`} onClick={handleNextClick}>
+                    <BsArrowRightShort className="m-2"/>
                 </button>
             </Swiper>
         </div>

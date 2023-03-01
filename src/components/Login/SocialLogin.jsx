@@ -1,4 +1,4 @@
-import styles from "@/styles/styles.module.css"
+import styles from "@/styles/Auth.module.css"
 import { google, facebook, apple } from "@/assets";
 
 const mediaSocial = [

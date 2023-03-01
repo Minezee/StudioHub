@@ -15,5 +15,5 @@ body {
 }
 
 .login-form > svg{
-    @apply scale-100 lg:scale-75 2xl:scale-100
+    @apply scale-100 lg:scale-75 2xl:scale-110
 }

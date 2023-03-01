@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "@/helpers/api";
-import styles from "@/styles/styles.module.css"
+import styles from "@/styles/Auth.module.css"
 import LoginLayout from "@/components/Login/LoginLayout";
 import SocialLogin from "@/components/Login/SocialLogin";
 import { ReactComponent as SignupImg} from "@/assets/signup_img.svg";

@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.label {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
 .input {
     background: #FFFFFF;
     border: 2px solid #F9A824;
     border-radius: 30px;
     @apply lg:min-w-[400px] 2xl:min-w-[500px] text-xl px-6 py-3 font-normal mt-2
-}
-
-.label {
-    font-weight: 600;
-    font-size: 1.5rem;
 }
 
 .link {

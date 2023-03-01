@@ -7,7 +7,15 @@ const HomePage = () => {
         <Layout>
             <Slider />
             <Container>
-                asdasd
+                <div className="h-screen flex items-center justify-center gap-[6.25rem]">
+                    <div className="bg-yellow-500 w-[314px] h-[328px]">
+                    </div>
+                    <div className="bg-yellow-500 w-[314px] h-[328px]">
+                    </div>
+                    <div className="bg-yellow-500 w-[314px] h-[328px]">
+                    </div>
+                </div>
+                asd
             </Container>
         </Layout>
     )

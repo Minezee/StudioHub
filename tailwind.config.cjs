@@ -11,7 +11,8 @@ module.exports = {
         current: 'currentColor',
         'white': '#ffffff',
         'gray-font': '#444B59',
-        'orange-300': '#FEE8B1',
+        'orange-400': '#F9A824',
+        'orange-500': '#F47F17', //navbar
       },
     },
   },
