@@ -16,15 +16,15 @@ const HomePage = () => {
                 </div>
                 <div className="mt-[3.25rem] flex items-center justify-center gap-[6.25rem] text-white text-5xl font-black">
                     <div className="bg-yellow-400 w-[19.5rem] h-[20.5rem] flex flex-col items-center justify-center rounded-2xl gap-9">
-                        <MdHomeFilled className="h-[150px] w-[145px]"/>
+                        <MdHomeFilled className="h-[9.5rem] w-36"/>
                         Studio
                     </div>
                     <div className="bg-yellow-400 w-[19.5rem] h-[20.5rem] flex flex-col items-center justify-center rounded-2xl gap-9">
-                        <GiGuitarBassHead className="h-[150px] w-[145px]"/>
+                        <GiGuitarBassHead className="h-[9.5rem] w-36"/>
                         Rent
                     </div>
                     <div className="bg-yellow-400 w-[19.5rem] h-[20.5rem] flex flex-col items-center justify-center rounded-2xl gap-9">
-                        <MdEventNote className="h-[150px] w-[145px]"/>
+                        <MdEventNote className="h-[9.5rem] w-36"/>
                         Event
                     </div>
                 </div>
