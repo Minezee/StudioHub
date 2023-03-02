@@ -8,14 +8,17 @@ const socialMedia = [
     {
         icon: FiInstagram,
         url: "https://www.instagram.com/nauvalfhrza",
+        name: "instagram"
     },
     {
         icon: BsFacebook,
         url: "https://www.instagram.com/nauvalfhrza",
+        name: "facebook"
     },
     {
         icon: BsYoutube,
         url: "https://www.instagram.com/nauvalfhrza",
+        name: "youtube"
     },
 ]
 
@@ -62,7 +65,7 @@ const Footer = () => {
                     <p className="text-start font-light text-xs">The Best App For Music Drivers In Indonesia! The Best Selection of Music Studio Rental Platform</p>
                     <div className="flex gap-9 mt-4">
                         {socialMedia.map(social => (
-                            <NavLink to={social.url} className="bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center">
+                            <NavLink key={social.name} to={social.url} className="bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center">
                                 <social.icon className="w-5 h-5" />
                             </NavLink>
                         ))}
@@ -72,7 +75,7 @@ const Footer = () => {
                     <h3 className={styles.title}>About Studio Hub</h3>
                     <ul className={styles.sub}>
                         {about.map(data => (
-                            <li className="mt-7"><Link to={data.url}>{data.text}</Link></li>
+                            <li key={data.text} className="mt-7"><Link to={data.url}>{data.text}</Link></li>
                         ))}
                     </ul>
                 </div>
@@ -80,7 +83,7 @@ const Footer = () => {
                     <h3 className={styles.title}>Product</h3>
                     <ul className={styles.sub}>
                         {product.map(data => (
-                            <li className="mt-7"><Link to={data.url}>{data.text}</Link></li>
+                            <li key={data.text} className="mt-7"><Link to={data.url}>{data.text}</Link></li>
                         ))}
                     </ul>
                 </div>

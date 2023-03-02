@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "@/helpers/api";
-import styles from "@/styles/Auth.module.css"
+import auth from "@/styles/Auth.module.css"
 import LoginLayout from "@/components/Login/LoginLayout";
 import SocialLogin from "@/components/Login/SocialLogin";
 import { ReactComponent as SignupImg} from "@/assets/signup_img.svg";
@@ -28,16 +28,16 @@ const SignupForm = () => {
   return (
     <form onSubmit={handleSubmit} className="text-gray-font my-16">
       <h3 className="font-extrabold text-[2rem]">WELCOME</h3>
-      <p className="text-xl font-normal mt-2">Already have an account?, <Link to="/login" className={`${styles.link} font-bold`}>Login</Link></p>
+      <p className="text-xl font-normal mt-2">Already have an account?, <Link to="/login" className={`${auth.link} font-bold`}>Login</Link></p>
       <div className="flex flex-col mt-[2.625rem]">
-        <label htmlFor="username" className={styles.label}>Username</label>
-        <input type="text" className={styles.input} />
-        <label htmlFor="email" className={`${styles.label} mt-7`}>Email</label>
-        <input type="email" className={styles.input} />
-        <label htmlFor="password" className={`${styles.label} mt-7`}>Password</label>
-        <input type="password" className={styles.input} />
+        <label htmlFor="username" className={auth.label}>Username</label>
+        <input type="text" className={auth.input} />
+        <label htmlFor="email" className={`${auth.label} mt-7`}>Email</label>
+        <input type="email" className={auth.input} />
+        <label htmlFor="password" className={`${auth.label} mt-7`}>Password</label>
+        <input type="password" className={auth.input} />
       </div>
-      <button className={styles.btn}>Signup</button>
+      <button className={auth.btn}>Signup</button>
       <SocialLogin />
     </form>
   )

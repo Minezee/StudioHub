@@ -1,9 +1,9 @@
 import Container from "../layouts/Container"
-import styles from "@/styles/Auth.module.css"
+import auth from "@/styles/Auth.module.css"
 
 const LoginLayout = ({ children }) => {
     return (
-        <div className={styles.background}>
+        <div className={auth.background}>
             <Container>
                 <div className="flex justify-between items-center login-form min-h-screen my-auto">
                     {children}

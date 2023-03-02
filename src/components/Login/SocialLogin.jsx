@@ -1,4 +1,4 @@
-import styles from "@/styles/Auth.module.css"
+import auth from "@/styles/Auth.module.css"
 import { google, facebook, apple } from "@/assets";
 
 const mediaSocial = [
@@ -26,7 +26,7 @@ const SocialLogin = () => {
       </div>
       <div className="flex justify-between">
         {mediaSocial.map(data => (
-          <div key={data.name} className={styles.box} title={`login with ${data.name}`}>
+          <div key={data.name} className={auth.box} title={`login with ${data.name}`}>
             <img src={data.img} alt={data.name} className="lg:scale-75 2xl:scale-100"/>
           </div>
         ))}

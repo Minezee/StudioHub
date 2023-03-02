@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 import { event_banner } from "@/assets";
-import styles from "@/styles/Slider.module.css"
+import home from "@/styles/Home.module.css"
 
 const Slider = () => {
     let arr = ["1", "2", "3", "4", "5", "6"]
@@ -48,7 +48,7 @@ const Slider = () => {
                 }}
                 className="mySwiper relative text-white"
             >
-                <button id="prev-btn" className={`${styles.btn} left-8`} onClick={handlePrevClick}>
+                <button id="prev-btn" className={`${home.btn} left-8`} onClick={handlePrevClick}>
                     <BsArrowLeftShort className="m-2"/>
                 </button>
                 {/* Slide */}
@@ -58,7 +58,7 @@ const Slider = () => {
                     </SwiperSlide>
                 ))}
                 {/* Slide */}
-                <button id="next-btn" className={`${styles.btn} right-8`} onClick={handleNextClick}>
+                <button id="next-btn" className={`${home.btn} right-8`} onClick={handleNextClick}>
                     <BsArrowRightShort className="m-2"/>
                 </button>
             </Swiper>
