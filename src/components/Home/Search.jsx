@@ -63,7 +63,7 @@ const Search = ({ feature }) => {
             <div className="flex items-center gap-8">
                 <div className="flex flex-col gap-7 text-orange-500 text-4xl font-bold">
                     {feature.map(menu => (
-                        <button onClick={() => setSelectedMenu(menu.name)} className={`${menu.name === selectedMenu ? "scale-105 bg-gray-100" : "scale-100 bg-white"} w-[19.75rem] py-6 px-6 rounded-2xl flex items-center justify-between hover:bg-gray-100`}>
+                        <button key={menu.name} onClick={() => setSelectedMenu(menu.name)} className={`${menu.name === selectedMenu ? "scale-105 bg-gray-100" : "scale-100 bg-white"} w-[19.75rem] py-6 px-6 rounded-2xl flex items-center justify-between hover:bg-gray-100`}>
                             <menu.icon className="h-12 w-auto" />
                             {menu.name}
                         </button>

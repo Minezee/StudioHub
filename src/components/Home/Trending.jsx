@@ -1,12 +1,7 @@
-import React from 'react'
+import StudioContainer from './StudioContainer';
 
 const Trending = () => {
-  return (
-    <div>
-        <h2 className="text-orange-500 text-5xl font-black">TRENDING STUDIOS</h2>
-        <p>This week;s trending studio</p>
-    </div>
-  )
+    return <StudioContainer title={"TRENDING STUDIOS"} paragraph={"This week's trending studio"} studio={[1, 2, 3, 4, 5]}/>
 }
 
 export default Trending

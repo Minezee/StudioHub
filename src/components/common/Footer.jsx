@@ -58,7 +58,7 @@ const product = [
 
 const Footer = () => {
     return (
-        <div className='bg-gray-footer flex flex-col text-white px-[6.25rem] pt-[4.5rem]'>
+        <div className='bg-gray-footer flex flex-col text-white px-[6.25rem] pt-[4.5rem] mt-20'>
             <div className="flex justify-start gap-[8.25rem] mb-[6.5rem]">
                 <div className="max-w-[12.25rem] flex flex-col justify-center">
                     <img src={logo_footer} alt="Studio Hub" className="w-[12.25rem]" />

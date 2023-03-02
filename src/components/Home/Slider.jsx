@@ -49,17 +49,19 @@ const Slider = () => {
                 className="mySwiper relative text-white"
             >
                 <button id="prev-btn" className={`${home.btn} left-8`} onClick={handlePrevClick}>
-                    <BsArrowLeftShort className="m-2"/>
+                    <BsArrowLeftShort className="m-2" />
                 </button>
                 {/* Slide */}
                 {arr.map(name => (
                     <SwiperSlide key={name}>
-                        <img className="h-auto w-full z-10" src={event_banner} alt="" />
+                        <div className="aspect-[2.29299363057/1] w-full bg-red-400">
+                            <img className="w-full h-full" src={event_banner} alt="" />
+                        </div>
                     </SwiperSlide>
                 ))}
                 {/* Slide */}
                 <button id="next-btn" className={`${home.btn} right-8`} onClick={handleNextClick}>
-                    <BsArrowRightShort className="m-2"/>
+                    <BsArrowRightShort className="m-2" />
                 </button>
             </Swiper>
         </div>
