@@ -54,7 +54,7 @@ const Slider = () => {
                 {/* Slide */}
                 {arr.map(name => (
                     <SwiperSlide key={name}>
-                        <div className="aspect-[2.29299363057/1] w-full bg-red-400">
+                        <div className="aspect-[2.29299363057/1] w-full bg-gray-200">
                             <img className="w-full h-full" src={event_banner} alt="" />
                         </div>
                     </SwiperSlide>
