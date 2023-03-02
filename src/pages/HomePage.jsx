@@ -1,5 +1,5 @@
 import Container from "@/components/layouts/Container";
-import { Search, MainFeature, Slider } from "../components/Home";
+import { Search, MainFeature, Slider, Trending } from "../components/Home";
 import Layout from "@/components/layouts/Layout";
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote } from "react-icons/md"
@@ -27,6 +27,7 @@ const HomePage = () => {
             <Container>
                 <MainFeature feature={feature}/>
                 <Search feature={feature}/>
+                <Trending />
             </Container>
         </Layout>
     )
