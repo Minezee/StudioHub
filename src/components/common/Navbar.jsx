@@ -12,7 +12,7 @@ const Navbar = () => {
                 <div>Event</div>
                 <div>Profile</div>
             </div>
-            <NavLink to="/login" className='px-4 py-2 bg-orange-400'>Login</NavLink>
+            <NavLink to="/login" className='px-10 py-2 rounded-lg bg-[#FBC12E] font-semibold'>Login</NavLink>
         </div>
     )
 }
