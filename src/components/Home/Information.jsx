@@ -1,5 +1,5 @@
 import React from 'react'
-import { lomba } from '../../assets'
+import { lomba } from '@/assets'
 
 const Information = () => {
     return (

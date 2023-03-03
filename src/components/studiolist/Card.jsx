@@ -1,4 +1,4 @@
-import { display_studio } from "../../assets"
+import { display_studio } from "@/assets"
 import DisplayStar from "../global/DisplayStar"
 import { HiLocationMarker } from "react-icons/hi"
 import { MdReviews } from "react-icons/md"

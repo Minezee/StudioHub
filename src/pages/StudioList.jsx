@@ -1,6 +1,6 @@
 import Container from "@/components/layouts/Container"
 import Layout from "@/components/layouts/Layout";
-import { ResultHeader, Filter, CardList } from "../components/studiolist";
+import { ResultHeader, Filter, CardList } from "@/components/studiolist";
 
 const StudioList = () => {
 
