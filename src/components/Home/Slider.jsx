@@ -26,7 +26,7 @@ const Slider = () => {
     };
 
     return (
-        <div>
+        <section>
             <Swiper
                 ref={swiperRef}
                 navigation={{
@@ -64,7 +64,7 @@ const Slider = () => {
                     <BsArrowRightShort className="m-2" />
                 </button>
             </Swiper>
-        </div>
+        </section>
     )
 }
 

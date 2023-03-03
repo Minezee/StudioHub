@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { SlArrowDown } from 'react-icons/sl';
 import SelectLocation from './SelectLocation';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const province = [    
     {
@@ -52,18 +54,24 @@ const Search = ({ feature }) => {
     const [selectedMenu, setSelectedMenu] = useState("");
     const [selectedProvince, setSelectedProvince] = useState(province[0])
     const [selectedCity, setSelectedCity] = useState(selectedProvince.city[0])
+    const navigate = useNavigate();
 
     function handleProvinceChange(selectedProvince) {
         setSelectedProvince(selectedProvince);
         setSelectedCity(selectedProvince.city[0]);
     }
 
+    function handleSubmit(e){
+        e.preventDefault()
+        navigate('/studio')
+    }
+
     return (
-        <div className='w-full bg-yellow-400 px-10 py-11 rounded-2xl mt-20 flex'>
+        <form onSubmit={handleSubmit} className='w-full bg-yellow-400 px-10 py-11 rounded-2xl mt-20 flex'>
             <div className="flex items-center gap-8">
                 <div className="flex flex-col gap-7 text-orange-500 text-4xl font-bold">
                     {feature.map(menu => (
-                        <button key={menu.name} onClick={() => setSelectedMenu(menu.name)} className={`${menu.name === selectedMenu ? "scale-105 bg-gray-100" : "scale-100 bg-white"} w-[19.75rem] py-6 px-6 rounded-2xl flex items-center justify-between hover:bg-gray-100`}>
+                        <button type='button' key={menu.name} onClick={() => setSelectedMenu(menu.name)} className={`${menu.name === selectedMenu ? "scale-105 bg-gray-100" : "scale-100 bg-white"} w-[19.75rem] py-6 px-6 rounded-2xl flex items-center justify-between hover:bg-gray-100`}>
                             <menu.icon className="h-12 w-auto" />
                             {menu.name}
                         </button>
@@ -79,6 +87,7 @@ const Search = ({ feature }) => {
                         <SelectLocation selectedLocation={selectedCity} onChanges={setSelectedCity} location={selectedProvince.city}/>
                     </div>
                 </div>
+                {/* Not fix? */}
                 <div className='flex flex-col w-full'>
                     <label htmlFor="location" className="font-bold text-4xl text-white">Date</label>
                     <div className='flex gap-4'>
@@ -96,8 +105,14 @@ const Search = ({ feature }) => {
                         </div>
                     </div>
                 </div>
+                <div className='flex justify-end'>
+                    <button type='submit' className='flex justify-between items-center gap-9 text-2xl text-white bg-orange-500 font-medium px-6 py-3 rounded-xl hover:opacity-80'>
+                        Search
+                        <AiOutlineSearch />
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     )
 }
 
