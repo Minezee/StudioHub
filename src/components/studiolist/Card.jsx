@@ -5,7 +5,7 @@ import { MdReviews } from "react-icons/md"
 
 const Card = () => {
     return (
-        <div className="bg-yellow-100 flex justify-between">
+        <div className="bg-card-bg flex justify-between text-white">
             <div className="flex items-center gap-5">
                 <div className="w-[12.5rem] h-[12.5rem]">
                     <img src={display_studio} alt="" className="w-full h-full" />

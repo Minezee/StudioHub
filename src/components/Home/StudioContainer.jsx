@@ -3,7 +3,7 @@ import DisplayStar from '../global/DisplayStar'
 
 const StudioContainer = ({ title, paragraph, studio }) => {
     return (
-        <section>
+        <section className='text-white'>
             <h2 className="text-orange-500 text-5xl font-black mt-20">{title}</h2>
             <p className="text-2xl font-medium mt-1">{paragraph}</p>
             <div className='mt-9 flex gap-4 justify-between'>
@@ -17,7 +17,6 @@ const StudioContainer = ({ title, paragraph, studio }) => {
                         <p className='text-orange-500 font-medium'>Rp 50.000</p>
                     </div>
                 ))}
-
             </div>
         </section>
     )

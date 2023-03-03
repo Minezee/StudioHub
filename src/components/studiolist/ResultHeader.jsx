@@ -7,7 +7,7 @@ const ResultHeader = () => {
     const date = searchParams.get('date');
 
     return (
-        <div className="mt-20 mb-7">
+        <div className="pt-20 mb-7">
                 <div className="w-full bg-yellow-400 px-[6.5rem] py-4 rounded-2xl flex justify-between">
                     <div>
                         <p className="text-2xl font-medium">Your Search result in {city}, {province}</p>

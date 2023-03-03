@@ -1,5 +1,5 @@
 import Container from "@/components/layouts/Container";
-import { Search, MainFeature, Slider, Trending, BigDeals, Information } from "@/components/Home";
+import { Search, MainFeature, Slider, Trending, BigDeals, Information } from "../components/Home";
 import Layout from "@/components/layouts/Layout";
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote } from "react-icons/md"

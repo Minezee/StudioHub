@@ -16,17 +16,17 @@ const SignupForm = () => {
   const [isFetching, setIsFetching] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    axiosInstance.post(`/auth/login`, { email, password })
-      .then((response) => {
-        console.log(response?.data)
-        setErrMsg("")
-      })
-      .catch((error) => {
-        setErrMsg(error?.response?.data?.msg || "Terjadi kesalahan, coba lagi nanti")
-      })
-  };
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   axiosInstance.post(`/auth/login`, { email, password })
+  //     .then((response) => {
+  //       console.log(response?.data)
+  //       setErrMsg("")
+  //     })
+  //     .catch((error) => {
+  //       setErrMsg(error?.response?.data?.msg || "Terjadi kesalahan, coba lagi nanti")
+  //     })
+  // };
 
   return (
     <form onSubmit={handleSubmit} className="text-gray-font my-16">

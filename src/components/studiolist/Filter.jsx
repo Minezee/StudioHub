@@ -33,7 +33,6 @@ const Filter = () => {
 
     const handleOptionClick = (menu, sub) => {
         if (selectedFilter[menu.title] === sub) {
-            // reset selected value if same option clicked
             handleSelect(menu.title, null);
         }
     };
@@ -41,7 +40,7 @@ const Filter = () => {
     return (
         <aside className="w-1/4 flex flex-col gap-8 px-8 py-8">
             {filterMenu.map((menu) => (
-                <div key={menu.title}>
+                <div key={menu.title} className="text-white">
                     <h3 className="font-bold">{menu.title}</h3>
                     <RadioGroup value={selectedFilter[menu.title]} onChange={(value) => handleSelect(menu.title, value)}>
                         <RadioGroup.Label className="sr-only">{menu.title}</RadioGroup.Label>
@@ -54,10 +53,10 @@ const Filter = () => {
                                     className="rounded-md cursor-pointer flex items-center space-x-4">
                                     {({ checked }) => (
                                         <>
-                                            <span className={`${checked ? "border-2" : "border"} border-yellow-400 rounded-full h-4 w-4 flex justify-center items-center`}>
+                                            <span className="border border-yellow-400 rounded-full h-4 w-4 flex justify-center items-center">
                                                 {checked && <span className='border bg-yellow-400 rounded-full h-[0.5625rem] w-[0.5625rem]' />}
                                             </span>
-                                            <RadioGroup.Label as="span" className="font-medium text-gray-900">
+                                            <RadioGroup.Label as="span" className="font-medium">
                                                 {sub}
                                             </RadioGroup.Label>
                                         </>

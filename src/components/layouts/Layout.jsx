@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Navbar />
-            <main>
+            <main className="bg-background pb-20">
                 {children}
             </main>
             <Footer />
