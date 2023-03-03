@@ -11,9 +11,10 @@ module.exports = {
         current: 'currentColor',
         'white': '#ffffff',
         'gray-font': '#444B59',
+        'yellow-100': '#FFF7E5',
         'yellow-400': '#FBC948',
         'orange-400': '#F9A824',
-        'orange-500': '#F47F17', //navbar
+        'orange-500': '#F47F17',
         'gray-footer': '#1B1B1B'
       },
     },

@@ -63,7 +63,7 @@ const Search = ({ feature }) => {
 
     function handleSubmit(e){
         e.preventDefault()
-        navigate('/studio')
+        navigate(`/studio-list?province=${selectedProvince.name}&city=${selectedCity.name}&date=${"27 april 2023"}`)
     }
 
     return (

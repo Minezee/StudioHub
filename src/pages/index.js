@@ -1,13 +1,15 @@
 import Login from "./Login"
-import HomePage from "./HomePage"
-import Information from "./Detail"
-import ListPage from "./ListPage"
 import Signup from "./Signup"
+import HomePage from "./HomePage"
+import ListPage from "./ListPage"
+import StudioList from "./StudioList"
+import Detail from "./Detail"
 
 export {
     Login,
-    HomePage,
-    Information,
-    ListPage,
     Signup,
+    HomePage,
+    Detail,
+    ListPage,
+    StudioList
 }
