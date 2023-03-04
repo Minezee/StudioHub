@@ -1,7 +1,7 @@
-import PageWrapper from "@/components/Layouts/PageWrapper"
+import PageWrapper from "@/components/layouts/PageWrapper"
 import auth from "@/styles/Auth.module.css"
 
-const AuthLayout = ({ children }) => {
+const LoginLayout = ({ children }) => {
     return (
             <div className={auth.background}>
                 <PageWrapper>
@@ -13,4 +13,4 @@ const AuthLayout = ({ children }) => {
     )
 }
 
-export default AuthLayout
+export default LoginLayout

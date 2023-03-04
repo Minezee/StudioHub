@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "@/helpers/api";
 import auth from "@/styles/Auth.module.css"
-import AuthLayout from "@/components/Layouts/AuthLayout";
+import LoginLayout from "@/components/Layouts/LoginLayout";
 import SocialLogin from "@/containers/Login/SocialLogin";
 import { ReactComponent as LoginImg } from "@/assets/login_img.svg";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
@@ -74,10 +74,10 @@ const LoginForm = () => {
 
 const Login = () => {
     return (
-        <AuthLayout>
+        <LoginLayout>
             <LoginForm />
             <LoginImg />
-        </AuthLayout>
+        </LoginLayout>
     );
 }
 
