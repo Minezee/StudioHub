@@ -1,4 +1,4 @@
-import Pagewrapper from "@/components/Layouts/PageWrapper"
+import PageWrapper from "@/components/Layouts/PageWrapper";
 import Layout from "@/components/Layouts/Layout";
 import SearchResult from "@/containers/ResultList/SearchResult";
 
@@ -6,9 +6,9 @@ const StudioList = () => {
 
   return (
     <Layout>
-      <Pagewrapper>
+      <PageWrapper>
         <SearchResult />
-      </Pagewrapper>
+      </PageWrapper>
     </Layout>
   )
 }
