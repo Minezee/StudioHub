@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { SlArrowDown } from 'react-icons/sl';
-import ListBox from '@/components/global/ListBox';
+import { Dropdown } from '@/components/global';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 
@@ -50,7 +50,7 @@ const province = [
 ];
 
 
-const Search = ({ feature }) => {
+const LocationSearch = ({ feature }) => {
     const [selectedMenu, setSelectedMenu] = useState("");
     const [selectedProvince, setSelectedProvince] = useState(province[0])
     const [selectedCity, setSelectedCity] = useState(selectedProvince.city[0])
@@ -71,42 +71,26 @@ const Search = ({ feature }) => {
             <div className="flex items-center gap-8">
                 <div className="flex flex-col gap-7 text-orange-500 text-4xl font-bold">
                     {feature.map(menu => (
-                        <button type='button' key={menu.name} onClick={() => setSelectedMenu(menu.name)} className={`${menu.name === selectedMenu ? "scale-105 bg-gray-100" : "scale-100 bg-white"} w-[19.75rem] py-6 px-6 rounded-2xl flex items-center justify-between hover:bg-gray-100`}>
+                        <button type='button' key={menu.name} onClick={() => setSelectedMenu(menu.name)} className={`${menu.name === selectedMenu ? "scale-105 bg-orange-500 text-dark" : "scale-100 bg-dark"} w-[19.75rem] py-6 px-6 rounded-2xl flex items-center justify-between hover:bg-orange-500 hover:text-dark`}>
                             <menu.icon className="h-12 w-auto" />
                             {menu.name}
                         </button>
                     ))}
                 </div>
-                <div className="bg-white h-[23.25rem] w-2 rounded-lg" />
+                <div className="bg-dark h-[23.25rem] w-2 rounded-lg" />
             </div>
             <div className="flex flex-col justify-evenly w-full mx-28">
                 <div className='flex flex-col w-full'>
                     <label htmlFor="location" className="font-bold text-4xl text-white">Location</label>
-                    <div className='flex gap-4'>
-                        <ListBox listboxValue={selectedProvince} onChanges={handleProvinceChange} option={province}/>
-                        <ListBox listboxValue={selectedCity} onChanges={setSelectedCity} option={selectedProvince.city}/>
+                    <div className='grid grid-cols-2 gap-4'>
+                        <Dropdown listboxValue={selectedProvince} onChanges={handleProvinceChange} option={province}/>
+                        <Dropdown listboxValue={selectedCity} onChanges={setSelectedCity} option={selectedProvince.city}/>
+                        <input type="date" className="bg-dark text-light-txt rounded-xl px-5 py-4 text-2xl font-medium mt-3 border-none outline-none hover:bg-gray-900" />
                     </div>
                 </div>
                 {/* Not fix? */}
-                <div className='flex flex-col w-full'>
-                    <label htmlFor="location" className="font-bold text-4xl text-white">Date</label>
-                    <div className='flex gap-4'>
-                        <div className="bg-white flex justify-between items-center px-5 py-4 w-1/3 rounded-xl text-2xl font-medium mt-3">
-                            2023
-                            <SlArrowDown className='w-4' />
-                        </div>
-                        <div className="bg-white flex justify-between items-center px-5 py-4 w-1/3 rounded-xl text-2xl font-medium mt-3">
-                            April
-                            <SlArrowDown className='w-4' />
-                        </div>
-                        <div className="bg-white flex justify-between items-center px-5 py-4 w-1/3 rounded-xl text-2xl font-medium mt-3">
-                            27
-                            <SlArrowDown className='w-4' />
-                        </div>
-                    </div>
-                </div>
                 <div className='flex justify-end'>
-                    <button type='submit' className='flex justify-between items-center gap-9 text-2xl text-white bg-orange-500 font-medium px-6 py-3 rounded-xl hover:opacity-80'>
+                    <button type='submit' className='flex justify-between items-center gap-9 text-2xl text-dark bg-orange-500 font-medium px-6 py-3 rounded-xl hover:opacity-80'>
                         Search
                         <AiOutlineSearch />
                     </button>
@@ -116,4 +100,4 @@ const Search = ({ feature }) => {
     )
 }
 
-export default Search
+export default LocationSearch

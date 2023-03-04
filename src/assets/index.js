@@ -7,6 +7,7 @@ import logo_footer from "./logo_footer.png"
 import display_studio from "./display_studio.png"
 import lomba from "./lomba.png"
 import logo from "./logo.png"
+import calender from "./calender.svg"
 
 export {
     facebook,
@@ -18,4 +19,5 @@ export {
     display_studio,
     lomba,
     logo,
+    calender,
 }

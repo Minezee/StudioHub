@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     @apply text-[10px] lg:text-[12px] 2xl:text-[16px]
 }
 
@@ -12,9 +12,18 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    @apply bg-background
+    @apply bg-dark
 }
 
-.login-form > svg{
+.login-form>svg {
     @apply scale-100 lg:scale-75 2xl:scale-110 hidden lg:block
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url('/src/assets/calender.svg');
+}
+
+input[type="date"]::-webkit-calendar-popup {
+    background-color: black;
+    color: #333;
 }

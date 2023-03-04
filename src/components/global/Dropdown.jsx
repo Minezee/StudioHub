@@ -1,22 +1,22 @@
 import { Listbox } from '@headlessui/react'
 import { SlArrowDown } from 'react-icons/sl';
 
-const ListBox = ({listboxValue, onChanges, option}) => {
+const Dropdown = ({listboxValue, onChanges, option}) => {
     return (
-        <div className='w-1/2'>
+        <div>
             <Listbox value={listboxValue} onChange={onChanges}>
                 <div className='w-full relative'>
-                    <Listbox.Button className="bg-white flex justify-between items-center px-5 py-4 w-full rounded-xl text-2xl font-medium mt-3 hover:bg-gray-100">
+                    <Listbox.Button className="bg-dark text-light-txt flex justify-between items-center px-5 py-4 w-full rounded-xl text-2xl font-medium mt-3 hover:bg-gray-900">
                         {listboxValue.name}
                         <SlArrowDown className='w-4' />
                     </Listbox.Button>
-                    <Listbox.Options className="bg-white rounded-2xl absolute top-[4.25rem] z-20 w-full">
+                    <Listbox.Options className="bg-dark text-light-txt rounded-2xl absolute top-[4.25rem] z-20 w-full">
                         {option.map((data) => (
                             <Listbox.Option
                                 key={data.name}
                                 value={data}
                                 disabled={data.unavailable}
-                                className="bg-white px-5 py-4 w-full rounded-xl text-lg font-medium cursor-pointer hover:bg-gray-100"
+                                className="bg-dark text-light-txt px-5 py-4 w-full rounded-xl text-lg font-medium cursor-pointer hover:bg-gray-900"
                             >
                                 {data.name}
                             </Listbox.Option>
@@ -28,4 +28,4 @@ const ListBox = ({listboxValue, onChanges, option}) => {
     )
 }
 
-export default ListBox
+export default Dropdown

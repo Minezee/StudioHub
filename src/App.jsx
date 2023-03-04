@@ -14,7 +14,7 @@ function ScrollToTop() {
 
 const App = () => {
   return (
-    <div className='max-w-[150rem] mx-auto bg-background'>
+    <div className='max-w-[150rem] mx-auto bg-dark'>
       <Routes>
         <Route element={<ScrollToTop />}>
           <Route path='/login' element={<Login />} />
