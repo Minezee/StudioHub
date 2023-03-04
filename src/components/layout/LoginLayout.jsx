@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/layouts/PageWrapper"
+import PageWrapper from "@/components/layout/PageWrapper"
 import auth from "@/styles/Auth.module.css"
 
 const LoginLayout = ({ children }) => {

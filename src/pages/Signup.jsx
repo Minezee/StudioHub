@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "@/helpers/api";
 import auth from "@/styles/Auth.module.css"
-import LoginLayout from "@/components/Layouts/LoginLayout";
+import LoginLayout from "@/components/layout/LoginLayout";
 import SocialLogin from "@/containers/Login/SocialLogin";
 import { ReactComponent as SignupImg } from "@/assets/signup_img.svg";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";

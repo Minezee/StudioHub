@@ -1,6 +1,6 @@
-import PageWrapper from "@/components/Layouts/PageWrapper";
+import PageWrapper from "@/components/layout/PageWrapper";
 import { Search, MainFeature, Slider, Trending, BigDeals, Information } from "@/containers/Home";
-import Layout from "@/components/Layouts/Layout";
+import Layout from "@/components/layout/Layout";
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote } from "react-icons/md"
 import { HiHome } from "react-icons/hi"

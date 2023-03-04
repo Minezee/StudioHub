@@ -1,4 +1,4 @@
-import { SortBy, Card, ResultHeader, Filter } from "@/components/Global"
+import { SortBy, Card, ResultHeader, Filter } from "@/components/global"
 
 const SearchResult = () => {
     return (
