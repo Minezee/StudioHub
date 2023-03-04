@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { SlArrowDown } from 'react-icons/sl';
-import { Dropdown } from '@/components/Global';
+import { Dropdown } from '@/components/global';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 
