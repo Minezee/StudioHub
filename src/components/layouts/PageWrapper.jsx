@@ -1,4 +1,4 @@
-const Container = ({children}) => {
+const PageWrapper = ({children}) => {
     return (
         <div className='mx-auto lg:mx-[5rem] 2xl:mx-[6.5rem]'>
             {children}
@@ -6,4 +6,4 @@ const Container = ({children}) => {
     )
 }
 
-export default Container
+export default PageWrapper

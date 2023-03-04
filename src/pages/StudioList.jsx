@@ -1,18 +1,14 @@
-import Container from "@/components/layouts/Container"
-import Layout from "@/components/layouts/Layout";
-import { ResultHeader, Filter, CardList } from "../components/studiolist";
+import Pagewrapper from "@/components/Layouts/PageWrapper"
+import Layout from "@/components/Layouts/Layout";
+import SearchResult from "@/containers/ResultList/SearchResult";
 
 const StudioList = () => {
 
   return (
     <Layout>
-      <Container>
-        <ResultHeader />
-        <div className="flex">
-          <Filter />
-          <CardList />
-        </div>
-      </Container>
+      <Pagewrapper>
+        <SearchResult />
+      </Pagewrapper>
     </Layout>
   )
 }

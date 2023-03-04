@@ -1,5 +1,5 @@
 import { display_studio } from '@/assets'
-import DisplayStar from '../global/DisplayStar'
+import { DisplayStar } from '@/components/Global'
 
 const StudioContainer = ({ title, paragraph, studio }) => {
     return (

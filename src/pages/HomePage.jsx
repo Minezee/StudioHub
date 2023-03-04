@@ -1,6 +1,6 @@
-import Container from "@/components/layouts/Container";
-import { Search, MainFeature, Slider, Trending, BigDeals, Information } from "../components/Home";
-import Layout from "@/components/layouts/Layout";
+import PageWrapper from "@/components/Layouts/PageWrapper";
+import { Search, MainFeature, Slider, Trending, BigDeals, Information } from "@/containers/Home";
+import Layout from "@/components/Layouts/Layout";
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote } from "react-icons/md"
 import { HiHome } from "react-icons/hi"
@@ -24,13 +24,13 @@ const HomePage = () => {
     return (
         <Layout>
             <Slider />
-            <Container>
+            <PageWrapper>
                 <MainFeature feature={feature}/>
                 <Search feature={feature}/>
                 <Trending />
                 <Information />
                 <BigDeals />
-            </Container>
+            </PageWrapper>
         </Layout>
     )
 }

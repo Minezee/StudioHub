@@ -1,13 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef } from "react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-// import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 import { event_banner } from "@/assets";

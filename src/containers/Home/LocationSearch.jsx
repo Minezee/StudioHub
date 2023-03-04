@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { SlArrowDown } from 'react-icons/sl';
-import SelectLocation from './SelectLocation';
+import ListBox from '@/components/Global/ListBox';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 
@@ -83,8 +83,8 @@ const Search = ({ feature }) => {
                 <div className='flex flex-col w-full'>
                     <label htmlFor="location" className="font-bold text-4xl text-white">Location</label>
                     <div className='flex gap-4'>
-                        <SelectLocation selectedLocation={selectedProvince} onChanges={handleProvinceChange} location={province}/>
-                        <SelectLocation selectedLocation={selectedCity} onChanges={setSelectedCity} location={selectedProvince.city}/>
+                        <ListBox listboxValue={selectedProvince} onChanges={handleProvinceChange} option={province}/>
+                        <ListBox listboxValue={selectedCity} onChanges={setSelectedCity} option={selectedProvince.city}/>
                     </div>
                 </div>
                 {/* Not fix? */}
