@@ -29,10 +29,10 @@ const SignupForm = () => {
   // };
 
   return (
-    <form onSubmit={""} className="text-white my-16">
+    <form className="text-white my-0 lg:my-16 w-4/5 md:w-1/2 lg:w-[35%]">
       <h3 className="font-extrabold text-[2rem]">WELCOME</h3>
       <p className="text-xl font-normal mt-2">Already have an account?, <Link to="/login" className={`${auth.link} font-bold`}>Login</Link></p>
-      <div className="flex flex-col mt-[2.625rem]">
+      <div className="flex flex-col mt-10 lg:mt-20">
         <label htmlFor="username" className={auth.label}>Username</label>
         <input 
           type="text" 
@@ -41,7 +41,7 @@ const SignupForm = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           />
-        <label htmlFor="email" className={`${auth.label} mt-7`}>Email</label>
+        <label htmlFor="email" className={`${auth.label} mt-5 lg:mt-7`}>Email</label>
         <input
           type="email"
           className={auth.input}
@@ -49,7 +49,7 @@ const SignupForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label htmlFor="password" className={`${auth.label} mt-7`}>Password</label>
+        <label htmlFor="password" className={`${auth.label} mt-5 lg:mt-7`}>Password</label>
         <div className="relative flex items-center">
           <input
             type={showPassword ? "text" : "password"}

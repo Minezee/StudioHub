@@ -11,7 +11,7 @@
     border: 2px solid #F9A824;
     border-radius: 30px;
     color: #FCD87C;
-    @apply lg:min-w-[400px] 2xl:min-w-[500px] text-xl px-6 py-3 my-2 bg-background
+    @apply w-full text-xl px-6 py-3 my-2 bg-background
 }
 
 .link {
@@ -19,12 +19,11 @@
 }
 
 .btn {
-    background: #F9A824;
     border: 2px solid #F9A824;
     border-radius: 30px;
     color: white;
     font-weight: 800;
-    @apply lg:min-w-[400px] 2xl:min-w-[500px] text-xl py-[0.625rem] mt-11
+    @apply w-full text-xl py-[0.625rem] mt-5 lg:mt-11 bg-orange-400
 }
 
 .box {
@@ -34,12 +33,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @apply w-[7.5rem] h-20
+    @apply h-20 flex-1
 }
 
 .background {
-    background-image: url("../assets/login_bg.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: 82%;
+    @apply bg-none lg:bg-[url("../assets/login_bg.png")]
 }

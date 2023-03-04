@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "@/helpers/api";
 import auth from "@/styles/Auth.module.css"
-import LoginLayout from "@/components/Login/LoginLayout";
-import SocialLogin from "@/components/Login/SocialLogin";
+import LoginLayout from "../components/Login/LoginLayout";
+import SocialLogin from "../components/Login/SocialLogin";
 import { ReactComponent as LoginImg } from "@/assets/login_img.svg";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
@@ -28,10 +28,10 @@ const LoginForm = () => {
     // };
 
     return (
-        <form className="text-white my-16">
+        <form className="text-white my-0 lg:my-16 w-4/5 sm:w-2/3 md:1/2 lg:w-[35%]">
             <h3 className="font-extrabold text-[2rem]">WELCOME BACK!</h3>
             <p className="text-xl font-normal mt-2">Don't have a account?, <Link to="/signup" className={`${auth.link} font-bold`}>Sign up</Link></p>
-            <div className="flex flex-col mt-20">
+            <div className="flex flex-col mt-10 lg:mt-20">
                 <label htmlFor="email" className={auth.label}>Email</label>
                 <input
                     type="email"
@@ -40,7 +40,7 @@ const LoginForm = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <label htmlFor="password" className={`${auth.label} mt-7`}>Password</label>
+                <label htmlFor="password" className={`${auth.label} mt-5 lg:mt-7`}>Password</label>
                 <div className="relative flex items-center">
                     <input
                         type={showPassword ? "text" : "password"}
@@ -59,7 +59,7 @@ const LoginForm = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between mt-[3.375rem]">
+            <div className="flex justify-between mt-10 lg:mt-[3.375rem]">
                 <div className="flex gap-4 items-center">
                     <input type="radio" className="w-7 h-7" />
                     <label htmlFor="radio" className="text-base">Remember me</label>

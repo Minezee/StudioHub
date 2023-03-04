@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html{
-    @apply text-[16px] lg:text-[12px] 2xl:text-[16px]
+    @apply text-[10px] lg:text-[12px] 2xl:text-[16px]
 }
 
 body {
@@ -12,8 +12,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    @apply bg-background
 }
 
 .login-form > svg{
-    @apply scale-100 lg:scale-75 2xl:scale-110
+    @apply scale-100 lg:scale-75 2xl:scale-110 hidden lg:block
 }
