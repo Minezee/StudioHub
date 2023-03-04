@@ -26,7 +26,7 @@ const SocialLogin = () => {
       </div>
       <div className="flex justify-between gap-10">
         {mediaSocial.map(data => (
-          <div key={data.name} className={`${auth.box} bg-background`} title={`login with ${data.name}`}>
+          <div key={data.name} className={`${auth.box} bg-dark`} title={`login with ${data.name}`}>
             <img src={data.img} alt={data.name} className="scale-50 lg:scale-75 2xl:scale-100" />
           </div>
         ))}
