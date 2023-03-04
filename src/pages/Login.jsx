@@ -28,7 +28,7 @@ const LoginForm = () => {
     // };
 
     return (
-        <form className="text-gray-font my-16">
+        <form className="text-white my-16">
             <h3 className="font-extrabold text-[2rem]">WELCOME BACK!</h3>
             <p className="text-xl font-normal mt-2">Don't have a account?, <Link to="/signup" className={`${auth.link} font-bold`}>Sign up</Link></p>
             <div className="flex flex-col mt-20">

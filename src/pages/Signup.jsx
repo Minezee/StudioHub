@@ -29,7 +29,7 @@ const SignupForm = () => {
   // };
 
   return (
-    <form onSubmit={handleSubmit} className="text-gray-font my-16">
+    <form onSubmit={""} className="text-white my-16">
       <h3 className="font-extrabold text-[2rem]">WELCOME</h3>
       <p className="text-xl font-normal mt-2">Already have an account?, <Link to="/login" className={`${auth.link} font-bold`}>Login</Link></p>
       <div className="flex flex-col mt-[2.625rem]">

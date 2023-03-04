@@ -11,7 +11,7 @@ module.exports = {
         current: 'currentColor',
         'white': '#ffffff',
         'gray-font': '#444B59',
-        'background': '#1E1E1E',
+        'background': '#121212',
         'card-bg': '#252013',
         'yellow-400': '#FBC948',
         'orange-400': '#F9A824',
