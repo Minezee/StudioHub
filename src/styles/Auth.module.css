@@ -11,7 +11,7 @@
     background: #FFFFFF;
     border: 2px solid #F9A824;
     border-radius: 30px;
-    color: black;
+    color: "#FCD87C";
     @apply lg:min-w-[400px] 2xl:min-w-[500px] text-xl px-6 py-3 my-2 
 }
 
