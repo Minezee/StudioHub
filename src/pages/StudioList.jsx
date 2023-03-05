@@ -7,7 +7,7 @@ const StudioList = () => {
   return (
     <Layout>
       <PageWrapper>
-        <SearchResult />
+        <SearchResult result="studio"/>
       </PageWrapper>
     </Layout>
   )

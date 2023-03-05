@@ -4,6 +4,7 @@ import HomePage from "./HomePage"
 import ListPage from "./ListPage"
 import StudioList from "./StudioList"
 import Detail from "./Detail"
+import RentList from "./RentList"
 
 export {
     Login,
@@ -11,5 +12,6 @@ export {
     HomePage,
     Detail,
     ListPage,
-    StudioList
+    StudioList,
+    RentList,
 }

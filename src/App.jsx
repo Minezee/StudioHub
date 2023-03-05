@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation, Outlet } from "react-router-dom"
-import { HomePage, Login, Signup, Detail, ListPage, StudioList } from "./pages"
+import { HomePage, Login, Signup, Detail, ListPage, StudioList, RentList } from "./pages"
 import { useEffect } from 'react';
 
 function ScrollToTop() {
@@ -21,6 +21,7 @@ const App = () => {
           <Route path='/signup' element={<Signup />} />
           <Route path='/' element={<HomePage />} />
           <Route path='/studio-list' element={<StudioList />} />
+          <Route path='/rent-list' element={<RentList />} />
           <Route path='/detail' element={<Detail />} />
           <Route path='/List' element={<ListPage />} />
         </Route>
