@@ -85,7 +85,7 @@ const LocationSearch = ({ feature }) => {
                     <div className='grid sm:grid-cols-2 grid-cols-1 gap-4'>
                         <Dropdown listboxValue={selectedProvince} onChanges={handleProvinceChange} option={province}/>
                         <Dropdown listboxValue={selectedCity} onChanges={setSelectedCity} option={selectedProvince.city}/>
-                        <div className='flex flex-col'>
+                        <div className='flex flex-col sm:mt-10'>
                             <label htmlFor="Date" className="font-bold text-4xl text-white">Date</label>
                             <input type="date" className="bg-dark text-light-txt rounded-xl px-5 py-4 text-2xl font-medium mt-3 border-none outline-none hover:bg-gray-900" />
                         </div>
