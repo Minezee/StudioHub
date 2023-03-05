@@ -38,13 +38,13 @@ const Filter = () => {
     };
 
     return (
-        <aside className="w-1/4 flex flex-col gap-8 px-8 py-8">
+        <aside className="w-full md:w-1/4 grid grid-cols-1 sm:grid-cols-3 md:flex md:flex-col gap-8 px-8 py-8 text-sm sm:text-base">
             {filterMenu.map((menu) => (
                 <div key={menu.title} className="text-white">
                     <h3 className="font-bold">{menu.title}</h3>
                     <RadioGroup value={selectedFilter[menu.title]} onChange={(value) => handleSelect(menu.title, value)}>
                         <RadioGroup.Label className="sr-only">{menu.title}</RadioGroup.Label>
-                        <div className="flex flex-col gap-4 mt-4">
+                        <div className="md:flex grid grid-cols-3 sm:grid-cols-2 md:flex-col gap-4 mt-4">
                             {menu.submenu.map((sub) => (
                                 <RadioGroup.Option
                                     key={sub}

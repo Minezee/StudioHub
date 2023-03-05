@@ -4,7 +4,7 @@ const SearchResult = () => {
     return (
         <>
             <ResultHeader />
-            <div className="flex">
+            <div className="flex flex-col md:flex-row ">
                 <Filter />
                 <div className="flex-1">
                     <SortBy />

@@ -6,6 +6,10 @@ import { useState, useEffect } from "react"
 
 const navMenu = [
     {
+        name: "Home",
+        direct: "/",
+    },
+    {
         name: "Studio",
         direct: "/",
     },
@@ -33,11 +37,11 @@ const Navbar = () => {
     return (
         <>
             {/* Dekstop */}
-            <header className='w-full hidden justify-between items-center bg-orange-500 px-16 py-4 text-white md:flex'>
-                <div className="flex text-white text-xl font-bold gap-6 items-center">
+            <header className='w-full hidden justify-between items-center bg-orange-500 px-16 py-4 text-white sm:flex'>
+                <NavLink to={'/'} className="flex text-white text-xl font-bold gap-6 items-center">
                     <img src={logo} alt="logo" className="h-14 w-auto" />
                     STUDIO HUB
-                </div>
+                </NavLink>
                 <nav className='flex gap-10 text-xl'>
                     {navMenu.map(menu => (
                         <Link key={menu.name} to={menu.direct}>{menu.name}</Link>
@@ -47,7 +51,7 @@ const Navbar = () => {
             </header>
 
             {/* Mobile */}
-            <header className='w-full flex justify-between md:hidden text-lg bg-orange-500 px-6 py-3 text-white'>
+            <header className='w-full flex justify-between sm:hidden text-lg bg-orange-500 px-6 py-3 text-white'>
                 <NavLink to="/" className="flex text-white font-bold gap-4 items-center">
                     <img src={logo} alt="logo" className="h-12 w-auto" />
                     STUDIO HUB
