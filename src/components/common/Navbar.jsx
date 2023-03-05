@@ -51,7 +51,7 @@ const Navbar = () => {
             </header>
 
             {/* Mobile */}
-            <header className='w-full flex justify-between sm:hidden text-lg bg-orange-500 px-6 py-3 text-white'>
+            <header className={`w-full flex justify-between sm:hidden text-lg ${isOpen ? "bg-dark" : "bg-orange-500"} px-6 py-3 text-white transition-all`}>
                 <NavLink to="/" className="flex text-white font-bold gap-4 items-center">
                     <img src={logo} alt="logo" className="h-12 w-auto" />
                     STUDIO HUB
@@ -60,14 +60,14 @@ const Navbar = () => {
                     {isOpen ? <IoClose /> : <AiOutlineMenu />}
                 </button>
             </header>
-            <div className={`${isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"} fixed flex py-16 flex-col items-center justify-between font-semibold text-white w-full bg-orange-500 h-full z-40 transition-all`}>
+            <div className={`${isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"} fixed flex py-16 flex-col items-center justify-between font-semibold text-light-txt w-full bg-dark h-full z-40 transition-all`}>
                 <div className="flex flex-col h-[calc(100%-45px)]">
                     <nav className='flex flex-col items-center gap-24 text-4xl font-bold flex-grow'>
                         {navMenu.map((menu) => (
                             <NavLink key={menu.name} onClick={() => setIsOpen(false)} to={menu.direct}>{menu.name}</NavLink>
                         ))}
                     </nav>
-                    <NavLink to={"/login"} className="bg-white px-6 py-3 font-bold rounded-lg text-orange-500 text-3xl">Login</NavLink>
+                    <NavLink to={"/login"} className="bg-yellow-400 px-6 py-3 font-bold rounded-lg text-dark text-3xl">Login</NavLink>
                 </div>
             </div>
         </>
