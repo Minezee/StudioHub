@@ -1,11 +1,11 @@
-import { display_studio } from "@/assets"
 import DisplayStar from "./DisplayStar"
 import { HiLocationMarker } from "react-icons/hi"
 import { MdReviews } from "react-icons/md"
+import { Link } from "react-router-dom"
 
-const Card = ({data}) => {
+const Card = ({data, searchResult}) => {
     return (
-        <div className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white">
+        <Link to={`/${searchResult}-information`} className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white">
             <div className="flex items-center gap-5">
                 <div className="h-full w-auto">
                     <img src={data.img} alt={data.name} className="w-auto h-full" />
@@ -30,7 +30,7 @@ const Card = ({data}) => {
                     <p className="font-bold text-lg sm:text-[2rem] text-orange-500">Rp 50.000</p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

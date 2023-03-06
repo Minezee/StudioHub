@@ -1,5 +1,5 @@
 import { SortBy, Card, ResultHeader, Filter } from "@/components/global"
-import { display_studio, display_rent } from "@/assets";
+import { display_studio, display_rent, display_event } from "@/assets";
 
 const SearchResult = ({ result }) => {
     var data;
@@ -96,6 +96,51 @@ const SearchResult = ({ result }) => {
                 location: "Lowokwaru, Malang",
             },
         ]
+    } else if (result === "event") {
+        data = [
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+            {
+                name: "Musik Hebat 2022",
+                img: display_event,
+                rating: { star: 4.2, resp: 872 },
+                location: "Lowokwaru, Malang",
+            },
+        ]
     }
 
     return (
@@ -107,7 +152,7 @@ const SearchResult = ({ result }) => {
                     <SortBy />
                     <div className="flex flex-col gap-7">
                         {data.map((data, index) => (
-                            <Card key={data.name + index} data={data} />
+                            <Card key={data.name + index} data={data} searchResult={result}/>
                         ))}
                     </div>
                 </div>

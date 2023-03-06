@@ -8,7 +8,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    @apply duration-200
+    /* @apply duration-200 */
 }
 
 @layer base {
@@ -42,3 +42,7 @@ input[type="date"]::-webkit-calendar-popup {
     background-color: black;
     color: #333;
 }
+
+.grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr) 2fr;
+  }

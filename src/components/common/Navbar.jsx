@@ -53,7 +53,7 @@ const Navbar = () => {
             {/* Mobile */}
             <header className={`w-full flex justify-between sm:hidden text-lg ${isOpen ? "bg-dark" : "bg-orange-500"} px-6 py-3 text-white transition-all`}>
                 <NavLink to="/" className="flex text-white font-bold gap-4 items-center">
-                    <img src={logo} alt="logo" className="h-12 w-auto" />
+                    <img src={logo} alt="logo" className="h-12" />
                     STUDIO HUB
                 </NavLink>
                 <button onClick={() => setIsOpen(!isOpen)} className="rounded-md text-white text-3xl">

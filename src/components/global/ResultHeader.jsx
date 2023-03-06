@@ -1,16 +1,27 @@
 import { useSearchParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { FilterContext } from "@/context/FilterContext";
 
 const ResultHeader = () => {
     const [searchParams] = useSearchParams();
     const [isFocus, setIsFocus] = useState(false)
-    const province = searchParams.get('province');
-    const city = searchParams.get('city');
-    const date = searchParams.get('date');
+    const { filterData ,updateFilterData } = useContext(FilterContext);
+    const province = searchParams.get('province') || filterData.selectedProvince;
+    const city = searchParams.get('city') || filterData.selectedCity;
+    const date = searchParams.get('date') || filterData.selectedDate;
 
-    function handleSubmit(e){
+    useEffect(() => {
+        updateFilterData({
+            selectedProvince: province,
+            selectedCity: city,
+            selectedDate: date,
+        });
+    }, [])
+
+    function handleSubmit(e) {
         e.preventDefault();
     }
 

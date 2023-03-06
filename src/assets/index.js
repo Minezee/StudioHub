@@ -9,6 +9,9 @@ import display_rent from "./display_rent.png"
 import lomba from "./lomba.png"
 import logo from "./logo.png"
 import calender from "./calender.svg"
+import display_event from "./display_event.png"
+import studio from "./studio.png"
+import studio_facility from "./studio_facility.png"
 
 export {
     facebook,
@@ -22,4 +25,7 @@ export {
     logo,
     calender,
     display_rent,
+    display_event,
+    studio,
+    studio_facility,
 }
