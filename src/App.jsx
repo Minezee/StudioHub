@@ -2,16 +2,13 @@ import { Routes, Route, useLocation, Outlet } from "react-router-dom"
 import { 
   HomePage, 
   Login, 
-  Signup, 
-  Detail, 
-  ListPage, 
+  Signup,
   StudioList, 
   RentList, 
   EventList, 
   StudioInformation 
 } from "./pages"
 import { useEffect } from 'react';
-import { FilterProvider } from "./context/FilterContext";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,7 +22,6 @@ function ScrollToTop() {
 
 const App = () => {
   return (
-    <FilterProvider>
       <div className='max-w-[150rem] mx-auto bg-dark'>
         <Routes>
           <Route element={<ScrollToTop />}>
@@ -36,12 +32,9 @@ const App = () => {
             <Route path='/rent-list' element={<RentList />} />
             <Route path='/event-list' element={<EventList />} />
             <Route path='/studio-information' element={<StudioInformation />} />
-            <Route path='/detail' element={<Detail />} />
-            <Route path='/List' element={<ListPage />} />
           </Route>
         </Routes>
       </div>
-    </FilterProvider>
   )
 }
 
