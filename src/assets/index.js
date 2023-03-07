@@ -12,6 +12,7 @@ import calender from "./calender.svg"
 import display_event from "./display_event.png"
 import studio from "./studio.png"
 import studio_facility from "./studio_facility.png"
+import userx_pp from "./userx_pp.png"
 
 export {
     facebook,
@@ -28,4 +29,5 @@ export {
     display_event,
     studio,
     studio_facility,
+    userx_pp,
 }
