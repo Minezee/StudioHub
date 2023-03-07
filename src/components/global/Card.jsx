@@ -25,9 +25,15 @@ const Card = ({data, searchResult}) => {
             </div>
             <div className="flex">
                 <div className="h-full w-1 bg-orange-500" />
-                <div className="flex flex-col justify-end items-start px-5 my-4">
-                    <s className="text-xs sm:text-xl font-medium">Rp 70.000</s>
-                    <p className="font-bold text-lg sm:text-[2rem] text-orange-500">Rp 50.000</p>
+                <div className="flex flex-col justify-between items-start pl-5 pr-4 sm:pr-10 my-4">
+                    <div className="flex items-center text-xs sm:text-xl font-semibold">
+                        <HiLocationMarker />
+                        750m
+                    </div>
+                    <div className="flex flex-col justify-end items-start">
+                        <s className="text-xs sm:text-xl font-medium">Rp 70.000</s>
+                        <p className="font-bold text-base sm:text-[2rem] text-orange-500">Rp 50.000</p>
+                    </div>
                 </div>
             </div>
         </Link>
