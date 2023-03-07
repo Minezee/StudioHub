@@ -37,8 +37,8 @@ const Navbar = () => {
     return (
         <>
             {/* Dekstop */}
-            <header className='w-full hidden justify-between items-center bg-orange-500 px-16 py-4 text-white sm:flex'>
-                <NavLink to={'/'} className="flex text-white text-xl font-bold gap-6 items-center">
+            <header className='w-full hidden justify-between items-center bg-orange-500 px-16 py-4 text-dark sm:flex'>
+                <NavLink to={'/'} className="flex text-xl font-bold gap-6 items-center">
                     <img src={logo} alt="logo" className="h-14 w-auto" />
                     STUDIO HUB
                 </NavLink>

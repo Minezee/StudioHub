@@ -32,18 +32,18 @@ const ResultHeader = () => {
                     <p className="text-2xl font-medium">Your Search result in {city}, {province}</p>
                     <p className="font-light">{date}</p>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto">
-                    <NavLink to={'/'} className={`text-white text-lg sm:text-xl font-medium bg-orange-500 flex items-center justify-center py-2 rounded-xl ${isFocus ? "sm:px-10" : "sm:flex-1"}`}>
+                <div className="flex flex-col sm:flex-row items-center gap-5 w-full text-dark sm:w-auto">
+                    <NavLink to={'/'} className={`text-lg sm:text-xl font-semibold bg-orange-500 flex items-center justify-center py-2 rounded-xl ${isFocus ? "sm:px-10" : "sm:flex-1"}`}>
                         <p className="px-10 sm:px-0">Change</p>
                     </NavLink>
-                    <form onSubmit={handleSubmit} className={`flex items-center bg-dark pr-4 rounded-xl shadow-md text-yellow-400 w-3/4 sm:w-auto text-xl ${!isFocus && 'sm:flex-1'}`}>
+                    <form onSubmit={handleSubmit} className={`flex items-center bg-orange-500 pr-4 rounded-xl shadow-md w-3/4 sm:w-auto text-xl ${!isFocus && 'sm:flex-1'}`}>
                         <input
                             required
                             type="text"
                             placeholder="Search..."
                             onFocus={() => setIsFocus(true)}
                             onBlur={() => setIsFocus(false)}
-                            className="px-4 py-2 focus:outline-none bg-transparent w-full"
+                            className="px-4 py-2 focus:outline-none bg-transparent w-full placeholder-dark"
                         />
                         <button type="submit" className="px-2 text-lg">
                             <FaSearch />
