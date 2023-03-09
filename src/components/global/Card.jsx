@@ -3,9 +3,9 @@ import { HiLocationMarker } from "react-icons/hi"
 import { MdReviews } from "react-icons/md"
 import { Link } from "react-router-dom"
 
-const Card = ({data, searchResult}) => {
+const Card = ({data}) => {
     return (
-        <Link to={`/${searchResult}-information`} className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white">
+        <Link to={`detail/${data.name.toLowerCase()}`} className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white">
             <div className="flex items-center gap-5">
                 <div className="h-full w-auto">
                     <img src={data.img} alt={data.name} className="w-auto h-full" />
