@@ -6,7 +6,8 @@ import {
   StudioList, 
   RentList, 
   EventList, 
-  StudioInformation 
+  StudioInformation, 
+  RentInformation
 } from "./pages"
 import { useEffect } from 'react';
 
@@ -28,10 +29,11 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/' element={<HomePage />} />
-            <Route path='/studio-list' element={<StudioList />} />
-            <Route path='/rent-list' element={<RentList />} />
-            <Route path='/event-list' element={<EventList />} />
-            <Route path='/studio-information' element={<StudioInformation />} />
+            <Route path='/studio' element={<StudioList />} />
+            <Route path='/rent' element={<RentList />} />
+            <Route path='/event' element={<EventList />} />
+            <Route path='/studio/detail/:name' element={<StudioInformation />} />
+            <Route path='/rent/detail/:name' element={<RentInformation />} />
           </Route>
         </Routes>
       </div>
