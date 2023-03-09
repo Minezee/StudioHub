@@ -17,10 +17,6 @@ const navMenu = [
         name: "Event",
         direct: "/",
     },
-    {
-        name: "Profile",
-        direct: "/",
-    },
 ]
 
 const Navbar = () => {
