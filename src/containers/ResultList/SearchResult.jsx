@@ -152,7 +152,7 @@ const SearchResult = ({ result }) => {
                     <SortBy />
                     <div className="flex flex-col gap-7">
                         {data.map((data, index) => (
-                            <Card key={data.name + index} data={data} searchResult={result}/>
+                            <Card key={data.name + index} data={data}/>
                         ))}
                     </div>
                 </div>
