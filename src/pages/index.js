@@ -5,6 +5,7 @@ import StudioList from "./StudioList"
 import RentList from "./RentList"
 import EventList from "./EventList"
 import StudioInformation from "./StudioInformation"
+import RentInformation from "./RentInformation"
 
 export {
     Login,
@@ -14,4 +15,5 @@ export {
     RentList,
     EventList,
     StudioInformation,
+    RentInformation,
 }
