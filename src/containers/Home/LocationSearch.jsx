@@ -64,7 +64,7 @@ const LocationSearch = ({ feature }) => {
 
     function handleSubmit(e) {
         e.preventDefault()
-        navigate(`/${selectedMenu.toLowerCase()}-list?&province=${selectedProvince.name.toLowerCase()}&city=${selectedCity.name.toLowerCase()}&date=${"27 april 2023"}`)
+        navigate(`/${selectedMenu.toLowerCase()}?&province=${selectedProvince.name.toLowerCase()}&city=${selectedCity.name.toLowerCase()}&date=${"27 april 2023"}`)
     }
 
     return (
