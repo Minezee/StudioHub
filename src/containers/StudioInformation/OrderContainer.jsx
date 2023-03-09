@@ -1,6 +1,6 @@
 import { studio } from "@/assets"
 
-const OrderContainer = () => {
+const OrderContainer = ({orderSection}) => {
     return (
         <div className='flex gap-4'>
             <img src={studio} alt="" className="w-[420px] rounded-[20px] hidden xl:block" />
@@ -13,7 +13,7 @@ const OrderContainer = () => {
                         <div key={data+"oc"} className="bg-dark py-2 rounded font-bold grid place-content-center">10:00 - 11:00</div>
                     ))}
                 </div>
-                <button className="bg-orange-500 text-dark text-h5 font-bold mt-10 float-right px-8 sm:px-16 py-3 sm:py-4 rounded-lg">Order Now</button>
+                <button ref={orderSection} className="bg-orange-500 text-dark text-h5 font-bold mt-10 float-right px-8 sm:px-16 py-3 sm:py-4 rounded-lg">Order Now</button>
             </div>
         </div>
     )
