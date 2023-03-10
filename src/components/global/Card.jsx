@@ -7,8 +7,8 @@ const Card = ({data}) => {
     return (
         <Link to={`detail/${data.name.toLowerCase()}`} className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white">
             <div className="flex items-center gap-5">
-                <div className="h-full w-auto">
-                    <img src={data.img} alt={data.name} className="w-auto h-full" />
+                <div className="h-full aspect-square">
+                    <img src={data.img} alt={data.name} className="w-full h-full" />
                 </div>
                 <div className="flex flex-col gap-2 font-medium">
                     <h3 className="text-lg sm:text-2xl leading-3">{data.name}</h3>
