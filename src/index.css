@@ -38,11 +38,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url('/src/assets/calender.svg');
 }
 
-input[type="date"]::-webkit-calendar-popup {
-    background-color: black;
-    color: #333;
-}
-
 .grid-cols-4 {
     grid-template-columns: repeat(3, 1fr) 2fr;
   }
