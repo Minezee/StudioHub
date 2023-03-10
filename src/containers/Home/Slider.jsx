@@ -42,7 +42,7 @@ const Slider = () => {
                 }}
                 className="mySwiper relative text-white"
             >
-                <button id="prev-btn" className={`${styles.btn} left-8`} onClick={handlePrevClick}>
+                <button id="prev-btn" className={`${styles.slideBtn} left-8`} onClick={handlePrevClick}>
                     <BsArrowLeftShort className="m-2" />
                 </button>
                 {/* Slide */}
@@ -54,7 +54,7 @@ const Slider = () => {
                     </SwiperSlide>
                 ))}
                 {/* Slide */}
-                <button id="next-btn" className={`${styles.btn} right-8`} onClick={handleNextClick}>
+                <button id="next-btn" className={`${styles.slideBtn} right-8`} onClick={handleNextClick}>
                     <BsArrowRightShort className="m-2" />
                 </button>
             </Swiper>
