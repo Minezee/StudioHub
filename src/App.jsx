@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation, Outlet } from "react-router-dom"
+import AuthRoutes from "./routes/PrivateRouter";
 import { 
   HomePage, 
   Login, 
@@ -7,7 +8,8 @@ import {
   RentList, 
   EventList, 
   StudioInformation, 
-  RentInformation
+  RentInformation,
+  Payment
 } from "./pages"
 import { useEffect } from 'react';
 
@@ -26,14 +28,17 @@ const App = () => {
       <div className='max-w-[150rem] mx-auto bg-dark'>
         <Routes>
           <Route element={<ScrollToTop />}>
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
+            <Route element={<AuthRoutes />}>
+              <Route path='/login' element={<Login />} />
+              <Route path='/signup' element={<Signup />} />
+            </Route>
             <Route path='/' element={<HomePage />} />
             <Route path='/studio' element={<StudioList />} />
             <Route path='/rent' element={<RentList />} />
             <Route path='/event' element={<EventList />} />
             <Route path='/studio/detail/:name' element={<StudioInformation />} />
             <Route path='/rent/detail/:name' element={<RentInformation />} />
+            <Route path="/:name/payment" element={<Payment />} />
           </Route>
         </Routes>
       </div>
