@@ -1,6 +1,10 @@
 import { DetailHeader, DisplayImage } from "@/components/global"
+import { NavLink, useNavigate } from "react-router-dom"
+import styles from "@/styles/Styles.module.css"
 
 const DetailRent = () => {
+    const navigate = useNavigate()
+
     return (
         <div className='bg-card-bg px-4 sm:px-14 py-6 rounded-[20px] text-white'>
             <DetailHeader name="Drum Set" location="Lowokwaru, Malang" rate={4} />
@@ -46,9 +50,9 @@ const DetailRent = () => {
             </p>
             <div className="mt-10 sm:mt-20 flex justify-between items-center font-bold">
                 <p className="text-h4 sm:text-h3 text-orange-500">Rp 350.000</p>
-                <button className="bg-orange-500 px-[1.5rem] sm:px-[4.25rem] py-3 sm:py-4 rounded-lg sm:text-h5 text-h6">
+                <NavLink to="/drum set/payment" className={styles.orderBtn}>
                     Order Now
-                </button>
+                </NavLink>
             </div>
         </div>
     )
