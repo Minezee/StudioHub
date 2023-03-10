@@ -1,15 +1,15 @@
 import { Outlet, Navigate } from 'react-router-dom';
-import { Navbar } from '../components';
+import Cookies from 'js-cookie';
 
-const PrivateRoutes = () => {
-    const token = sessionStorage.token;
+const AuthRoutes = () => {
+    const token = Cookies.get('auth_token') || sessionStorage.getItem('auth_token');
 
     return (
         token ? 
-        <Outlet />
+        <Navigate to={'/'} />
         :
-        <Navigate to={'/login'} />
+        <Outlet />
     );
 };
 
-export default PrivateRoutes;
+export default AuthRoutes;
