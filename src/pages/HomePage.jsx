@@ -4,18 +4,19 @@ import Layout from "@/components/layout/Layout";
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote } from "react-icons/md"
 import { HiHome } from "react-icons/hi"
+import Cookies from "js-cookie";
 
 const feature = [
     {
-        name: "Studio", 
+        name: "Studio",
         icon: HiHome,
     },
     {
-        name: "Rent", 
+        name: "Rent",
         icon: GiGuitarBassHead,
     },
     {
-        name: "Event", 
+        name: "Event",
         icon: MdEventNote,
     },
 ]
@@ -25,8 +26,8 @@ const HomePage = () => {
         <Layout>
             <Slider />
             <PageWrapper>
-                <MainFeature feature={feature}/>
-                <Search feature={feature}/>
+                <MainFeature feature={feature} />
+                <Search feature={feature} />
                 <Trending />
                 <Information />
                 <BigDeals />
