@@ -1,8 +1,10 @@
 import { studio } from "@/assets"
+import { NavLink } from "react-router-dom"
+import styles from "@/styles/Styles.module.css"
 
 const OrderContainer = ({orderSection}) => {
     return (
-        <div className='flex gap-4'>
+        <div className='flex gap-4 bg-card-bg'>
             <img src={studio} alt="" className="w-[420px] rounded-[20px] hidden xl:block" />
             <div className="bg-yellow-400 rounded-[20px] px-6 py-6 flex-1 text-dark">
                 <h3 className="text-h3 sm:text-h2 font-bold">Room Deluxe</h3>
@@ -13,7 +15,7 @@ const OrderContainer = ({orderSection}) => {
                         <div key={data+"oc"} className="bg-dark py-2 rounded font-bold grid place-content-center">10:00 - 11:00</div>
                     ))}
                 </div>
-                <button ref={orderSection} className="bg-orange-500 text-dark text-h5 font-bold mt-10 float-right px-8 sm:px-16 py-3 sm:py-4 rounded-lg">Order Now</button>
+                <NavLink to="/corner music studio/payment" ref={orderSection} className={`${styles.orderBtn} mt-10 float-right`}>Order Now</NavLink>
             </div>
         </div>
     )

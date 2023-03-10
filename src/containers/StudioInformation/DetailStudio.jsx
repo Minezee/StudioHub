@@ -1,4 +1,5 @@
 import { DisplayImage, DetailHeader } from "@/components/global"
+import styles from "@/styles/Styles.module.css"
 
 const DetailStudio = ({orderSection}) => {
     const scrollToSection = (ref) => {
@@ -15,7 +16,7 @@ const DetailStudio = ({orderSection}) => {
             <DisplayImage />
             <div className="mt-10 sm:mt-20 flex justify-between items-center font-bold">
                 <p className="text-h4 sm:text-h3 text-orange-500">Rp 50.000</p>
-                <button onClick={() => scrollToSection(orderSection)} className="bg-orange-500 px-[1.5rem] sm:px-[4.25rem] py-3 sm:py-4 rounded-lg sm:text-h5 text-h6">
+                <button onClick={() => scrollToSection(orderSection)} className={styles.orderBtn}>
                     Order Now
                 </button>
             </div>
