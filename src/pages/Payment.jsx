@@ -2,7 +2,7 @@ import PageWrapper from "@/components/layout/PageWrapper"
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { logo } from "@/assets";
-import { PaymentHeader, Cart, Review } from "@/containers/PaymentPage";
+import { PaymentHeader, Cart, Review, Confirm, PaymentStep } from "@/containers/PaymentPage";
 
 const Payment = () => {
     const [activeStep, setActiveStep] = useState(0);
@@ -14,22 +14,24 @@ const Payment = () => {
         },
         {
             title: 'Review',
-            content: <Review />,
+            content: <Review setActiveStep={setActiveStep}/>,
         },
         {
             title: 'Payment',
-            content: "<Login />",
+            content: <PaymentStep setActiveStep={setActiveStep}/>,
         },
         {
             title: 'Confirm',
-            content: "<Login />",
+            content: <Confirm />,
         },
     ];
 
     return (
         <PageWrapper>
-            <PaymentHeader steps={steps} activeStep={activeStep}/>
-            {steps[activeStep].content}
+            <div className="flex flex-col min-h-screen">
+                <PaymentHeader steps={steps} activeStep={activeStep} setActiveStep={setActiveStep}/>
+                {steps[activeStep].content}
+            </div>
         </PageWrapper>
     )
 }
