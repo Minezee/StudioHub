@@ -1,8 +1,15 @@
 import { studio } from "@/assets"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import styles from "@/styles/Styles.module.css"
 
 const OrderContainer = ({orderSection}) => {
+    const navigate = useNavigate();
+
+    function handleClick(){
+        sessionStorage.setItem('isPayment', true);
+        navigate('/corner music studio/payment')
+    }
+    
     return (
         <div className='flex gap-4 bg-card-bg'>
             <img src={studio} alt="" className="w-[420px] rounded-[20px] hidden xl:block" />
@@ -15,7 +22,7 @@ const OrderContainer = ({orderSection}) => {
                         <div key={data+"oc"} className="bg-dark py-2 rounded font-bold grid place-content-center">10:00 - 11:00</div>
                     ))}
                 </div>
-                <NavLink to="/corner music studio/payment" ref={orderSection} className={`${styles.orderBtn} mt-10 float-right`}>Order Now</NavLink>
+                <button onClick={handleClick} ref={orderSection} className={`${styles.orderBtn} mt-10 float-right`}>Order Now</button>
             </div>
         </div>
     )
