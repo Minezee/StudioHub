@@ -87,12 +87,17 @@ const Navbar = () => {
             </header>
             <div className={`${isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"} fixed flex py-16 flex-col items-center justify-between font-semibold text-light-txt w-full bg-dark h-full z-40 transition-all`}>
                 <div className="flex flex-col h-[calc(100%-45px)]">
-                    <nav className='flex flex-col items-center gap-24 text-4xl font-bold flex-grow'>
-                        <NavLink onClick={() => setIsOpen(false)} to={'/'}>Profile</NavLink>
-                        <NavLink onClick={() => setIsOpen(false)} to={'/'}>History</NavLink>
+                    <nav className='flex flex-col items-center gap-10 text-4xl font-bold flex-grow'>
                         {navMenu.map((menu) => (
                             <NavLink key={menu.name} onClick={() => setIsOpen(false)} to={menu.direct}>{menu.name}</NavLink>
                         ))}
+                    {token ?
+                        <>
+                            <NavLink onClick={() => setIsOpen(false)} to={'/'}>Profile</NavLink>
+                            <NavLink onClick={() => setIsOpen(false)} to={'/'}>History</NavLink>
+                        </>
+                        :
+                        null}
                     </nav>
                     {token ?
                         <button onClick={handleLogout} className="bg-yellow-400 px-6 py-3 font-bold rounded-lg text-dark text-3xl">Logout</button>
