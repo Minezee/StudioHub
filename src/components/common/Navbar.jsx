@@ -16,6 +16,10 @@ const navMenu = [
         direct: "/",
     },
     {
+        name: "Rent",
+        direct: "/",
+    },
+    {
         name: "Event",
         direct: "/",
     },
@@ -84,7 +88,8 @@ const Navbar = () => {
             <div className={`${isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-[100%]"} fixed flex py-16 flex-col items-center justify-between font-semibold text-light-txt w-full bg-dark h-full z-40 transition-all`}>
                 <div className="flex flex-col h-[calc(100%-45px)]">
                     <nav className='flex flex-col items-center gap-24 text-4xl font-bold flex-grow'>
-                        <NavLink key={"profile"} onClick={() => setIsOpen(false)} to={'/'}>Profile</NavLink>
+                        <NavLink onClick={() => setIsOpen(false)} to={'/'}>Profile</NavLink>
+                        <NavLink onClick={() => setIsOpen(false)} to={'/'}>History</NavLink>
                         {navMenu.map((menu) => (
                             <NavLink key={menu.name} onClick={() => setIsOpen(false)} to={menu.direct}>{menu.name}</NavLink>
                         ))}
