@@ -6,7 +6,7 @@ export const OrderProvider = ({ children }) => {
     const [buyerData, setBuyerData] = useState({
         contactName: null,
         contactPhoneNum: null,
-        contactAddress: null
+        contactEmail: null
     });
 
     const updateBuyerData = (data) => {
