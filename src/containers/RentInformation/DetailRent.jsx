@@ -5,6 +5,11 @@ import styles from "@/styles/Styles.module.css"
 const DetailRent = () => {
     const navigate = useNavigate()
 
+    function handleClick(){
+        sessionStorage.setItem('isPayment', true);
+        navigate('/drum set/payment')
+    }
+
     return (
         <div className='bg-card-bg px-4 sm:px-14 py-6 rounded-[20px] text-white'>
             <DetailHeader name="Drum Set" location="Lowokwaru, Malang" rate={4} />
@@ -50,9 +55,9 @@ const DetailRent = () => {
             </p>
             <div className="mt-10 sm:mt-20 flex justify-between items-center font-bold">
                 <p className="text-h4 sm:text-h3 text-orange-500">Rp 350.000</p>
-                <NavLink to="/drum set/payment" className={styles.orderBtn}>
+                <button onClick={handleClick} className={styles.orderBtn}>
                     Order Now
-                </NavLink>
+                </button>
             </div>
         </div>
     )
