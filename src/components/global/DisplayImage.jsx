@@ -1,4 +1,4 @@
-import { studio } from "@/assets"
+import { studio } from "@/assets/image"
 
 const DisplayImage = () => {
     const dummy = [1, 2, 3, 4, 5, 6];

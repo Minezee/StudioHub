@@ -1,5 +1,5 @@
 import { SortBy, Card, ResultHeader, Filter } from "@/components/global"
-import { display_studio, display_rent, display_event } from "@/assets";
+import { display_studio, display_rent, display_event } from "@/assets/image";
 
 const SearchResult = ({ result }) => {
     var data;

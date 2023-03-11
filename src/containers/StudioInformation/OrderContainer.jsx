@@ -1,4 +1,4 @@
-import { studio } from "@/assets"
+import { studio } from "@/assets/image"
 import { NavLink, useNavigate } from "react-router-dom"
 import styles from "@/styles/Styles.module.css"
 

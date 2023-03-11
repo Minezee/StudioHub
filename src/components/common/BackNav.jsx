@@ -1,6 +1,6 @@
 import { IoIosArrowBack } from "react-icons/io"
 import { NavLink } from "react-router-dom"
-import { logo } from "@/assets"
+import { logo } from "@/assets/image"
 
 const BackNav = () => {
     return (

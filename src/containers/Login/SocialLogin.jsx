@@ -1,5 +1,5 @@
 import auth from "@/styles/Auth.module.css"
-import { google, facebook, apple } from "@/assets";
+import { google, facebook, apple } from "@/assets/image";
 
 const mediaSocial = [
   {

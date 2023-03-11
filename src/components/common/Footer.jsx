@@ -1,4 +1,4 @@
-import { logo_footer } from "@/assets"
+import { logo_footer } from "@/assets/image"
 import { FiInstagram } from "react-icons/fi"
 import { BsFacebook, BsYoutube } from "react-icons/bs"
 import { NavLink, Link } from "react-router-dom"

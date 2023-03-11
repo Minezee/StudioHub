@@ -2,7 +2,7 @@ import styles from "@/styles/Styles.module.css"
 import { useState, useContext } from "react"
 import { RadioGroup } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Mic } from "@/assets/mic.svg";
+import { ReactComponent as Mic } from "@/assets/svg/mic.svg";
 import { OrderContext } from "@/context/OrderContext";
 
 const Cart = ({ setActiveStep }) => {

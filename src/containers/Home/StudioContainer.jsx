@@ -1,4 +1,4 @@
-import { display_studio } from '@/assets';
+import { display_studio } from '@/assets/image';
 import { DisplayStar } from '@/components/global';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

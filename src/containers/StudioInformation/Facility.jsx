@@ -1,4 +1,4 @@
-import { studio_facility } from "@/assets"
+import { studio_facility } from "@/assets/image"
 import PageWrapper from "@/components/layout/PageWrapper"
 
 const Facility = () => {

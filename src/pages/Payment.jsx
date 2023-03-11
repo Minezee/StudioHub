@@ -1,7 +1,7 @@
 import PageWrapper from "@/components/layout/PageWrapper"
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { logo } from "@/assets";
+import { logo } from "@/assets/image";
 import { PaymentHeader, Cart, Review, Confirm, PaymentStep } from "@/containers/PaymentPage";
 
 const Payment = () => {

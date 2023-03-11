@@ -1,5 +1,5 @@
 import PageWrapper from "@/components/layout/PageWrapper";
-import { Search, MainFeature, Slider, Trending, BigDeals, Information } from "@/containers/Home";
+import { LocationSearch, MainFeature, Slider, Trending, BigDeals, Information } from "@/containers/Home";
 import Layout from "@/components/layout/Layout";
 import { GiGuitarBassHead } from "react-icons/gi"
 import { MdEventNote } from "react-icons/md"
@@ -27,7 +27,7 @@ const HomePage = () => {
             <Slider />
             <PageWrapper>
                 <MainFeature feature={feature} />
-                <Search feature={feature} />
+                <LocationSearch feature={feature} />
                 <Trending />
                 <Information />
                 <BigDeals />

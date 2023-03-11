@@ -1,4 +1,4 @@
-import { logo } from "@/assets"
+import { logo } from "@/assets/image"
 import { NavLink, Link } from "react-router-dom"
 import { AiOutlineMenu } from "react-icons/ai"
 import { IoClose } from "react-icons/io5"

@@ -1,4 +1,4 @@
-import { ReactComponent as LoginImg } from "@/assets/login_img.svg";
+import { ReactComponent as LoginImg } from "@/assets//svg/login_img.svg";
 import LoginLayout from "@/components/layout/LoginLayout";
 import LoginForm from "@/containers/Login/LoginForm";
 

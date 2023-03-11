@@ -1,7 +1,7 @@
 //Home
 import MainFeature from "./MainFeature";
 import Slider from "./Slider";
-import Search from "./LocationSearch";
+import LocationSearch from "./LocationSearch";
 import Trending from "./Trending";
 import BigDeals from "./BigDeals";
 import Information from "./Information";
@@ -13,7 +13,7 @@ export {
     //Home
     Slider,
     MainFeature,
-    Search,
+    LocationSearch,
     Trending,
     BigDeals,
     Information,

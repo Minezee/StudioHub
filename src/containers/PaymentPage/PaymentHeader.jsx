@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import { logo } from "@/assets"
+import { logo } from "@/assets/image"
 import { IoIosArrowBack } from "react-icons/io"
 
 const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {

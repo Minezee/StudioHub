@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
-import { event_banner } from "@/assets";
+import { event_banner } from "@/assets/image";
 import styles from "@/styles/Styles.module.css"
 
 const Slider = () => {

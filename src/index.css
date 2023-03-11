@@ -35,9 +35,9 @@ body {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    background-image: url('/src/assets/calender.svg');
+    background-image: url('/src/assets/svg/calender.svg');
 }
 
 .grid-cols-4 {
     grid-template-columns: repeat(3, 1fr) 2fr;
-  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import DisplayStar from './DisplayStar'
-import { studio, userx_pp } from '@/assets'
+import { studio, userx_pp } from '@/assets/image'
 import { FaThumbsUp } from 'react-icons/fa'
 
 const CommentCard = () => {
