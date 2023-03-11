@@ -9,9 +9,11 @@ import {
   EventList, 
   StudioInformation, 
   RentInformation,
-  Payment
+  Payment,
+  History,
 } from "./pages"
 import { useEffect } from 'react';
+import PaymentRouter from "./routes/PaymentRouter";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,9 +38,12 @@ const App = () => {
             <Route path='/studio' element={<StudioList />} />
             <Route path='/rent' element={<RentList />} />
             <Route path='/event' element={<EventList />} />
+            <Route path="/history" element={<History />} />
             <Route path='/studio/detail/:name' element={<StudioInformation />} />
             <Route path='/rent/detail/:name' element={<RentInformation />} />
-            <Route path="/:name/payment" element={<Payment />} />
+            <Route element={<PaymentRouter />}>
+              <Route path="/:name/payment" element={<Payment />} />
+            </Route>
           </Route>
         </Routes>
       </div>
