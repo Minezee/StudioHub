@@ -13,6 +13,11 @@ import display_event from "./display_event.png"
 import studio from "./studio.png"
 import studio_facility from "./studio_facility.png"
 import userx_pp from "./userx_pp.png"
+import BCA from "./BCA.png"
+import BNI from "./BNI.png"
+import BSI from "./BSI.png"
+import livin from "./livin.png"
+import mandiri from "./mandiri.png"
 
 export {
     facebook,
@@ -30,4 +35,9 @@ export {
     studio,
     studio_facility,
     userx_pp,
+    BCA,
+    BNI,
+    BSI,
+    livin,
+    mandiri,
 }

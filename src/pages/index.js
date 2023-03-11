@@ -7,6 +7,7 @@ import EventList from "./EventList"
 import StudioInformation from "./StudioInformation"
 import RentInformation from "./RentInformation"
 import Payment from "./Payment"
+import History from "./History"
 
 export {
     Login,
@@ -18,4 +19,5 @@ export {
     StudioInformation,
     RentInformation,
     Payment,
+    History,
 }
