@@ -44,7 +44,7 @@ const LoginForm = () => {
     return (
         <form onSubmit={handleSubmit} className="text-white my-0 lg:my-16 w-4/5 sm:w-2/3 md:1/2 lg:w-[35%]">
             <h3 className="font-extrabold text-[2rem]">WELCOME BACK!</h3>
-            <p className="text-xl font-normal mt-2">Don't have a account?, <Link to="/signup" className={`${auth.link} font-bold`}>Sign up</Link> or <Link to="/" className={`${auth.link} font-bold`}>Explore First</Link></p>
+            <p className="text-xl font-normal mt-2">Don't have a account?, <Link to="/signup" className={`${auth.link} font-bold`}>Sign up</Link> or <Link to="/" className={`${auth.link} font-bold`}>Explore</Link></p>
             <div className="flex flex-col mt-10 lg:mt-20">
                 <label htmlFor="email" className={auth.label}>Email</label>
                 <input
