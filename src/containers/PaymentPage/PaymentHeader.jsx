@@ -1,14 +1,25 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { logo } from "@/assets"
+import { IoIosArrowBack } from "react-icons/io"
 
-const PaymentHeader = ({ steps, activeStep }) => {
+const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {
+    const navigate = useNavigate();
+    
+    function handleClick(){
+        if(activeStep > 0 && activeStep < 3){
+            setActiveStep(activeStep - 1)
+        }else{
+            navigate(-1)
+        }
+    }
+    
     return (
-        <div className="flex gap-[4.75rem] items-center mt-14 relative mb-7">
-            <NavLink to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
-                <img src={logo} alt="logo" className="w-7" />
-                STUDIO HUB
-            </NavLink>
-            <div className="flex flex-1 items-center">
+        <div className="flex justify-between items-center mt-14 relative mb-7">
+            <button onClick={handleClick} className="flex text-h5 font-bold gap-2 items-center text-white">
+                <IoIosArrowBack />
+                BACK
+            </button>
+            <div className="flex justify-center flex-1 items-center">
                 {steps.map((data, index) => {
                     if (index === 3) {
                         return (
@@ -30,6 +41,10 @@ const PaymentHeader = ({ steps, activeStep }) => {
                     }
                 })}
             </div>
+            <NavLink to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
+                <img src={logo} alt="logo" className="w-7" />
+                STUDIO HUB
+            </NavLink>
         </div>
     )
 }
