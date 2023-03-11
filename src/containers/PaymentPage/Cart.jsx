@@ -17,7 +17,7 @@ const Cart = ({ setActiveStep }) => {
         updateBuyerData({
             contactName: name,
             contactPhoneNum:phoneNum,
-            contactAddress: email,
+            contactEmail: email,
         });
         console.log(buyerData);
         setActiveStep(1);
@@ -104,11 +104,11 @@ const Cart = ({ setActiveStep }) => {
                     <div className="w-full h-1 bg-white mt-3 mb-7" />
                     <div className="flex flex-col gap-10">
                         <div className="flex justify-between">
-                            <p className="text-b1 font-normal">{"(1x) Room Vip((1jam)"}</p>
+                            <span className="text-b1 font-normal">{"(1x) Room Vip((1jam)"}</span>
                             Rp. 50.000
                         </div>
                         <div className="flex justify-between">
-                            <p className="text-b1 font-normal">Pajak dan Biaya</p>
+                            <span className="text-b1 font-normal">Pajak dan Biaya</span>
                             Rp. 5.000
                         </div>
                     </div>
@@ -116,7 +116,7 @@ const Cart = ({ setActiveStep }) => {
                         <p className="w-1/2">
                             Dengan mengeklik tombol dibawah, Anda menyetujui <Link className={styles.link}>Syarat dan Ketentuan</Link> serta <Link className={styles.link}>Kebijakan Privasi</Link> dari Studiohub
                         </p>
-                        <button type="submit" className={`${styles.orderBtn} bg-orange-500`}>Order Now</button>
+                        <button type="submit" className={`${styles.orderBtn} bg-orange-500`}>Book Now</button>
                     </div>
                 </div>
             </form>
