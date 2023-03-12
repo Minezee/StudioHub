@@ -41,3 +41,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .grid-cols-4 {
     grid-template-columns: repeat(3, 1fr) 2fr;
 }
+
+/* Custom Calendar */
+.css-cwhad8-MuiDateCalendar-root{
+    @apply !text-light-txt
+}
+
+.css-1yllih9-MuiPaper-root-MuiPickersPopper-paper div{
+    @apply bg-dark
+}
+
+.css-1yllih9-MuiPaper-root-MuiPickersPopper-paper button{
+    @apply !text-light-txt !bg-transparent !text-b1 hover:!bg-card-bg
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root *{
+    @apply !border-none !text-light-txt placeholder:!text-light-txt placeholder:!opacity-100
+}
+
+.css-156tkzh-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{
+    @apply !bg-card-bg
+}
+
+.css-hlj6pa-MuiDialogActions-root{
+    @apply !justify-between
+}
+
+.css-1anqmj6-MuiPopper-root-MuiPickersPopper-root div{
+    @apply rounded-[1.25rem]
+}
+
+.css-9yjdhh-MuiDialogContent-root:first-of-type{
+    @apply !bg-dark
+}
+
+.css-9yjdhh-MuiDialogContent-root:first-of-type *{
+    @apply !text-light-txt bg-transparent
+}
+
+.css-9yjdhh-MuiDialogContent-root:first-of-type button{
+    @apply !text-b1
+}

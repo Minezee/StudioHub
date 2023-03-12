@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { SlArrowDown } from 'react-icons/sl';
 import { Dropdown } from '@/components/global';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { RadioGroup } from "@headlessui/react"
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 const province = [
     {
@@ -55,7 +57,13 @@ const LocationSearch = ({ feature }) => {
     const [selectedMenu, setSelectedMenu] = useState("Studio");
     const [selectedProvince, setSelectedProvince] = useState(province[0])
     const [selectedCity, setSelectedCity] = useState(selectedProvince.city[0])
+    const [startDate, setStartDate] = useState(new Date());
     const navigate = useNavigate();
+
+    const handleValueChange = (newValue) => {
+        console.log("newValue:", newValue);
+        setValue(newValue);
+    }
 
     function handleProvinceChange(selectedProvince) {
         setSelectedProvince(selectedProvince);
@@ -96,7 +104,21 @@ const LocationSearch = ({ feature }) => {
                         <Dropdown listboxValue={selectedCity} onChanges={setSelectedCity} option={selectedProvince.city} />
                         <div className='flex flex-col sm:mt-10'>
                             <label htmlFor="Date" className="font-bold text-4xl text-white">Date</label>
-                            <input required type="date" className="bg-dark text-light-txt rounded-xl px-5 py-4 text-2xl font-medium mt-3 border-none outline-none hover:bg-gray-900" />
+                            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                <DatePicker
+                                    orientation='portrait'
+                                    className='!bg-dark rounded-xl'
+                                    format='DD/MM/YYYY'
+                                    slotProps={{
+                                        actionBar: {
+                                            actions: ['clear', 'today'],
+                                            
+                                        },
+                                        
+                                    }}
+                                    
+                                />
+                            </LocalizationProvider>
                         </div>
                     </div>
                 </div>

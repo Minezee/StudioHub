@@ -38,5 +38,5 @@
     background-position: right;
     background-repeat: no-repeat;
     background-size: 82%;
-    @apply bg-none lg:bg-[url("../assets/login_bg.png")]
+    @apply bg-none lg:bg-[url("../assets/image/login_bg.png")]
 }
