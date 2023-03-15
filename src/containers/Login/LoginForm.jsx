@@ -87,8 +87,8 @@ const LoginForm = () => {
             </div>
             <div className="flex justify-between mt-10 lg:mt-[3.375rem]">
                 <div className="flex gap-3 items-center">
-                    <span onClick={() => setRememberUser(!rememberUser)} className="border border-yellow-400 rounded-full h-6 w-6 flex justify-center items-center cursor-pointer">
-                        {rememberUser && <span className='border bg-yellow-400 rounded-full h-1/2 aspect-square' />}
+                    <span onClick={() => setRememberUser(!rememberUser)} className="border border-orange-500 rounded-full h-6 w-6 flex justify-center items-center cursor-pointer">
+                        {rememberUser && <span className='border bg-orange-500 rounded-full h-1/2 aspect-square' />}
                     </span>
                     <span>
                         Ingat saya
