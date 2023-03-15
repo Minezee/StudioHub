@@ -43,8 +43,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Custom Calendar */
-.css-cwhad8-MuiDateCalendar-root{
+.css-cwhad8-MuiDateCalendar-root *{
     @apply !text-light-txt
+}
+
+.css-cwhad8-MuiDateCalendar-root span{
+    @apply !text-b1
 }
 
 .css-1yllih9-MuiPaper-root-MuiPickersPopper-paper div{
@@ -56,7 +60,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root *{
-    @apply !border-none !text-light-txt placeholder:!text-light-txt placeholder:!opacity-100
+    @apply !border-none !text-light-txt !text-lg placeholder:!text-light-txt placeholder:!opacity-100
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root svg{
+    @apply !text-2xl
 }
 
 .css-156tkzh-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{

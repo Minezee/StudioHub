@@ -53,8 +53,8 @@ const Filter = () => {
                                     className="rounded-md cursor-pointer flex items-center space-x-4">
                                     {({ checked }) => (
                                         <>
-                                            <span className="border border-yellow-400 rounded-full h-4 w-4 flex justify-center items-center">
-                                                {checked && <span className='border bg-yellow-400 rounded-full h-[0.5625rem] w-[0.5625rem]' />}
+                                            <span className="border border-orange-500 rounded-full h-4 w-4 flex justify-center items-center">
+                                                {checked && <span className='border bg-orange-500 rounded-full h-[0.5625rem] w-[0.5625rem]' />}
                                             </span>
                                             <RadioGroup.Label as="span" className="font-medium">
                                                 {sub}

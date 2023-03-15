@@ -107,7 +107,7 @@ const LocationSearch = ({ feature }) => {
                             <LocalizationProvider dateAdapter={AdapterDayjs}>
                                 <DatePicker
                                     orientation='portrait'
-                                    className='!bg-dark rounded-xl'
+                                    className='!bg-dark rounded-xl !mt-3'
                                     format='DD/MM/YYYY'
                                     slotProps={{
                                         actionBar: {

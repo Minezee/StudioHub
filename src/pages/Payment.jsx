@@ -1,7 +1,5 @@
 import PageWrapper from "@/components/layout/PageWrapper"
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { logo } from "@/assets/image";
 import { PaymentHeader, Cart, Review, Confirm, PaymentStep } from "@/containers/PaymentPage";
 
 const Payment = () => {
@@ -10,15 +8,15 @@ const Payment = () => {
     const steps = [
         {
             title: 'Cart',
-            content: <Cart setActiveStep={setActiveStep}/>,
+            content: <Cart setActiveStep={setActiveStep} />,
         },
         {
             title: 'Review',
-            content: <Review setActiveStep={setActiveStep}/>,
+            content: <Review setActiveStep={setActiveStep} />,
         },
         {
             title: 'Payment',
-            content: <PaymentStep setActiveStep={setActiveStep}/>,
+            content: <PaymentStep setActiveStep={setActiveStep} />,
         },
         {
             title: 'Confirm',
@@ -28,10 +26,8 @@ const Payment = () => {
 
     return (
         <PageWrapper>
-            <div className="flex flex-col min-h-screen">
-                <PaymentHeader steps={steps} activeStep={activeStep} setActiveStep={setActiveStep}/>
-                {steps[activeStep].content}
-            </div>
+            <PaymentHeader steps={steps} activeStep={activeStep} setActiveStep={setActiveStep} />
+            {steps[activeStep].content}
         </PageWrapper>
     )
 }

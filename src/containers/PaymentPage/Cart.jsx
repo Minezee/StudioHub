@@ -3,11 +3,11 @@ import { useState, useContext } from "react"
 import { RadioGroup } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Mic } from "@/assets/svg/mic.svg";
-import { OrderContext } from "@/context/OrderContext";
+import { AppContext } from "@/context/AppContext";
 
 const Cart = ({ setActiveStep }) => {
     const [orderType, setOrderType] = useState('self');
-    const { buyerData ,updateBuyerData } = useContext(OrderContext);
+    const { buyerData ,updateBuyerData } = useContext(AppContext);
     const [name, setName] = useState('');
     const [phoneNum, setPhoneNum] = useState('');
     const [email, setEmail] = useState('');
@@ -24,8 +24,8 @@ const Cart = ({ setActiveStep }) => {
     }
 
     return (
-        <div className='w-full flex gap-11 text-white'>
-            <form onSubmit={handleSubmit} className='w-4/6 pl-5'>
+        <div className='w-full flex flex-col-reverse md:flex-row gap-6 md:gap-11 text-white'>
+            <form onSubmit={handleSubmit} className='w-full md:w-4/6'>
                 <label htmlFor="name" className={styles.label}>Nama Kontak</label>
                 <input
                     type="text"
@@ -36,8 +36,8 @@ const Cart = ({ setActiveStep }) => {
                     placeholder="Masukan nama kontak"
                 />
                 <p>Isi nama pemesanan sesuai KTP/Paspor/SIM (tanpa tanda baca/gelar)</p>
-                <div className="w-full flex gap-5 mt-7">
-                    <div className="w-1/2">
+                <div className="w-full flex flex-col sm:flex-row gap-5 mt-7">
+                    <div className="w-full sm:w-1/2">
                         <label htmlFor="name" className={styles.label}>No handphone kontak</label>
                         <input
                             type="tel"
@@ -49,7 +49,7 @@ const Cart = ({ setActiveStep }) => {
                         />
                         <p>Contoh: +62812345678, untuk Kode Negara(+62)</p>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full sm:w-1/2">
                         <label htmlFor="name" className={styles.label}>Alamat email kontak</label>
                         <input
                             type="email"
@@ -63,17 +63,17 @@ const Cart = ({ setActiveStep }) => {
                     </div>
                 </div>
 
-                <RadioGroup value={orderType} onChange={setOrderType} className="flex gap-10 justify-evenly mt-10">
+                <RadioGroup value={orderType} onChange={setOrderType} className="flex md:gap-10 justify-between  md:justify-evenly mt-10">
                     <RadioGroup.Label className="sr-only">Order untuk?</RadioGroup.Label>
                     <RadioGroup.Option
                         value="self"
-                        className="rounded-md cursor-pointer flex items-center gap-8">
+                        className="rounded-md cursor-pointer flex items-center gap-4 sm:gap-8">
                         {({ checked }) => (
                             <>
-                                <span className="border border-yellow-400 rounded-full h-8 w-8 flex justify-center items-center">
-                                    {checked && <span className=' bg-yellow-400 rounded-full h-1/2 aspect-square' />}
+                                <span className="border border-orange-500 rounded-full h-6 sm:h-8 w-6 sm:w-8 flex justify-center items-center">
+                                    {checked && <span className=' bg-orange-500 rounded-full h-1/2 aspect-square' />}
                                 </span>
-                                <RadioGroup.Label as="span" className="text-h6">
+                                <RadioGroup.Label as="span" className="sm:text-h6">
                                     Sama dengan pemesan
                                 </RadioGroup.Label>
                             </>
@@ -81,13 +81,13 @@ const Cart = ({ setActiveStep }) => {
                     </RadioGroup.Option>
                     <RadioGroup.Option
                         value="other"
-                        className="rounded-md cursor-pointer flex items-center gap-8">
+                        className="rounded-md cursor-pointer flex items-center gap-4 sm:gap-8">
                         {({ checked }) => (
                             <>
-                                <span className="border border-yellow-400 rounded-full h-8 w-8 flex justify-center items-center">
-                                    {checked && <span className=' bg-yellow-400 rounded-full h-1/2 aspect-square' />}
+                                <span className="border border-orange-500 rounded-full h-6 sm:h-8 w-6 sm:w-8 flex justify-center items-center">
+                                    {checked && <span className=' bg-orange-500 rounded-full h-1/2 aspect-square' />}
                                 </span>
-                                <RadioGroup.Label as="span" className="text-h6">
+                                <RadioGroup.Label as="span" className="sm:text-h6">
                                     Saya memesan untuk orang lain
                                 </RadioGroup.Label>
                             </>
@@ -112,8 +112,8 @@ const Cart = ({ setActiveStep }) => {
                             Rp. 5.000
                         </div>
                     </div>
-                    <div className="flex justify-between items-end mt-7 mb-14">
-                        <p className="w-1/2">
+                    <div className="flex flex-row justify-between items-end mt-7 mb-14">
+                        <p className="w-1/2 text-b1">
                             Dengan mengeklik tombol dibawah, Anda menyetujui <Link className={styles.link}>Syarat dan Ketentuan</Link> serta <Link className={styles.link}>Kebijakan Privasi</Link> dari Studiohub
                         </p>
                         <button type="submit" className={`${styles.orderBtn} bg-orange-500`}>Book Now</button>

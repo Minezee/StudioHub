@@ -2,9 +2,10 @@ import { logo } from "@/assets/image"
 import { NavLink, Link } from "react-router-dom"
 import { AiOutlineMenu } from "react-icons/ai"
 import { IoClose } from "react-icons/io5"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import Cookies from "js-cookie"
+import { AppContext } from "@/context/AppContext"
 
 const navMenu = [
     {
@@ -25,10 +26,12 @@ const navMenu = [
     },
 ]
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const token = Cookies.get('auth_token') || sessionStorage.getItem('auth_token');
+    const { token, userData } = useContext(AppContext);
     const navigate = useNavigate();
+    console.log(userData)
 
     // prevent user scrolling when open navigation on mobile
     useEffect(() => {
@@ -41,7 +44,8 @@ const Navbar = () => {
 
     function handleLogout() {
         Cookies.remove("auth_token");
-        sessionStorage.removeItem("auth_token")
+        sessionStorage.removeItem("auth_token");
+        sessionStorage.removeItem("isPayment");
         navigate('/login')
     }
 
@@ -58,16 +62,18 @@ const Navbar = () => {
                         <Link key={menu.name} to={menu.direct}>{menu.name}</Link>
                     ))}
                 </nav>
-                {token ?
+                {userData ?
                     <div className="relative group">
-                        <div className="flex items-center gap-2 text-h6">
-                            Welcome User
+                        <div className="flex items-center gap-2 text-h6 font-bold">
+                            Welcome, {userData.name}
                             <div className="bg-gray-200 h-11 w-11 rounded-full"></div>
                         </div>
-                        <div className="absolute group-hover:flex top-10 z-50 w-full hidden flex-col items-center font-bold gap-4 pt-10 py-5">
-                            <button className="bg-yellow-500 rounded w-full py-2 hover:bg-yellow-600">Profile</button>
-                            <button className="bg-yellow-500 rounded w-full py-2 hover:bg-yellow-600">History</button>
-                            <button onClick={handleLogout} className="bg-yellow-500 rounded w-full py-2 hover:bg-yellow-600">Logout</button>
+                        <div className="absolute group-hover:block top-10 z-50 w-full hidden pt-7 py-5">
+                            <div className="bg-yellow-500 flex flex-col items-center font-bold justify-center text-center rounded-lg">
+                                <NavLink to="/profile" className="rounded w-full py-2 hover:bg-yellow-600">Profile</NavLink>
+                                <NavLink to="/history" className="rounded w-full py-2 hover:bg-yellow-600">History</NavLink>
+                                <button onClick={handleLogout} className="rounded w-full py-2 hover:bg-yellow-600">Logout</button>
+                            </div>
                         </div>
                     </div>
                     :
@@ -91,13 +97,13 @@ const Navbar = () => {
                         {navMenu.map((menu) => (
                             <NavLink key={menu.name} onClick={() => setIsOpen(false)} to={menu.direct}>{menu.name}</NavLink>
                         ))}
-                    {token ?
-                        <>
-                            <NavLink onClick={() => setIsOpen(false)} to={'/'}>Profile</NavLink>
-                            <NavLink onClick={() => setIsOpen(false)} to={'/'}>History</NavLink>
-                        </>
-                        :
-                        null}
+                        {token ?
+                            <>
+                                <NavLink onClick={() => setIsOpen(false)} to={'/profile'}>Profile</NavLink>
+                                <NavLink onClick={() => setIsOpen(false)} to={'/'}>History</NavLink>
+                            </>
+                            :
+                            null}
                     </nav>
                     {token ?
                         <button onClick={handleLogout} className="bg-yellow-400 px-6 py-3 font-bold rounded-lg text-dark text-3xl">Logout</button>

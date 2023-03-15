@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import { FilterContext } from "@/context/FilterContext";
+import { AppContext } from "@/context/AppContext";
 
 const ResultHeader = () => {
     const [searchParams] = useSearchParams();
     const [isFocus, setIsFocus] = useState(false)
-    const { filterData ,updateFilterData } = useContext(FilterContext);
+    const { filterData ,updateFilterData } = useContext(AppContext);
     const province = searchParams.get('province') || filterData.selectedProvince;
     const city = searchParams.get('city') || filterData.selectedCity;
     const date = searchParams.get('date') || filterData.selectedDate;
@@ -27,7 +27,7 @@ const ResultHeader = () => {
 
     return (
         <div className="pt-20 mb-7">
-            <div className="w-full bg-yellow-400 pl-0 sm:pl-10 md:pl-[6.5rem] sm:pr-10 py-4 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 text-center sm:text-start">
+            <div className="w-full bg-yellow-400 pl-0 sm:pl-10 md:pl-[6.5rem] sm:pr-10 py-4 rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 text-center sm:text-start text-white border-orange-500 border-solid border-[1px]">
                 <div>
                     <p className="text-2xl font-medium">Your Search result in {city}, {province}</p>
                     <p className="font-light">{date}</p>

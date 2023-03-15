@@ -15,7 +15,7 @@ const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {
     
     return (
         <div className="flex justify-between items-center mt-14 relative mb-7">
-            <button onClick={handleClick} className="flex text-h5 font-bold gap-2 items-center text-white">
+            <button onClick={handleClick} className="flex text-h6 sm:text-h5 font-bold gap-2 items-center text-white">
                 <IoIosArrowBack />
                 BACK
             </button>
@@ -24,16 +24,16 @@ const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {
                     if (index === 3) {
                         return (
                             <div key={data.title} className={`${activeStep > index ? "text-yellow-500" : "text-white"} flex flex-col items-center`}>
-                                <div className={`${activeStep > index ? "bg-yellow-500" : "bg-white"} w-7 h-7 rounded-full`} />
-                                <p className="absolute top-10">{data.title}</p>
+                                <div className={`${activeStep > index ? "bg-yellow-500" : "bg-white"} w-5 sm:w-7 h-5 sm:h-7 rounded-full`} />
+                                <p className="hidden sm:block absolute top-10">{data.title}</p>
                             </div>
                         )
                     } else {
                         return (
                             <div key={data.title} className="flex w-1/6 items-center">
                                 <div className={`${activeStep > index ? "text-yellow-500" : "text-white"} flex flex-col items-center`}>
-                                    <div className={`${activeStep > index ? "bg-yellow-500" : "bg-white"} w-7 h-7 rounded-full`} />
-                                    <p className="absolute top-10">{data.title}</p>
+                                    <div className={`${activeStep > index ? "bg-yellow-500" : "bg-white"} w-5 sm:w-7 h-5 sm:h-7 rounded-full`} />
+                                    <p className="hidden sm:block absolute top-10">{data.title}</p>
                                 </div>
                                 <div className={`${activeStep > index ? "bg-yellow-500" : "bg-white"} w-full h-1`} />
                             </div>
@@ -43,7 +43,7 @@ const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {
             </div>
             <NavLink to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
                 <img src={logo} alt="logo" className="w-7" />
-                STUDIO HUB
+                <span className="hidden sm:block">STUDIO HUB</span>
             </NavLink>
         </div>
     )

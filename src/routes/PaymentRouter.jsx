@@ -1,11 +1,12 @@
-import Cookies from "js-cookie";
 import { Outlet, Navigate } from "react-router-dom";
+import { AppContext } from "@/context/AppContext";
+import { useContext } from "react";
 
 const PaymentRouter = () => {
     const isPayment = sessionStorage.getItem('isPayment');
-    const isAuth = Cookies.get('auth_token') || sessionStorage.getItem('auth_token');
+    const { token } = useContext(AppContext);
 
-    if(!isAuth) return <Navigate to={'/login'}/>
+    if(!token) return <Navigate to={'/login'}/>
 
     return (
         isPayment ? 

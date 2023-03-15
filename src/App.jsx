@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation, Outlet } from "react-router-dom"
-import AuthRoutes from "./routes/PrivateRouter";
+import AuthRoutes from "./routes/AuthRoutes";
 import { 
   HomePage, 
   Login, 
@@ -11,6 +11,9 @@ import {
   RentInformation,
   Payment,
   History,
+  Profile,
+  TopupMenu,
+  PaymentMethod,
 } from "./pages"
 import { useEffect } from 'react';
 import PaymentRouter from "./routes/PaymentRouter";
@@ -35,6 +38,9 @@ const App = () => {
               <Route path='/signup' element={<Signup />} />
             </Route>
             <Route path='/' element={<HomePage />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/topup-menu' element={<TopupMenu />} />
+            <Route path='/payment-method' element={<PaymentMethod />} />
             <Route path='/studio' element={<StudioList />} />
             <Route path='/rent' element={<RentList />} />
             <Route path='/event' element={<EventList />} />

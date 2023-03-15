@@ -8,6 +8,13 @@ import StudioInformation from "./StudioInformation"
 import RentInformation from "./RentInformation"
 import Payment from "./Payment"
 import History from "./History"
+import Profile from "./Profile"
+import TopupMenu from "./TopupMenu"
+import PaymentMethod from "./PaymentMethod"
+import TopupConfirmation from "./TopupConfirmation"
+import TopupPayment from "./TopupPayment"
+import PaymentSuccess from "./PaymentSuccess"
+
 
 export {
     Login,
@@ -20,4 +27,10 @@ export {
     RentInformation,
     Payment,
     History,
+    Profile,
+    TopupMenu,
+    PaymentMethod,
+    TopupConfirmation,
+    TopupPayment,
+    PaymentSuccess,
 }

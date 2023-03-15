@@ -1,12 +1,12 @@
 import styles from "@/styles/Styles.module.css"
 import { useContext } from "react"
-import { OrderContext } from "@/context/OrderContext"
+import { AppContext } from "@/context/AppContext"
 import { studio } from "@/assets/image";
 import { mandiri, BCA, BSI, BNI, livin } from "@/assets/image";
 import { Link } from "react-router-dom";
 
 const Review = ({setActiveStep}) => {
-    const { buyerData } = useContext(OrderContext);
+    const { buyerData } = useContext(AppContext);
     
     function handleClick(){
         setActiveStep(2);
@@ -14,19 +14,19 @@ const Review = ({setActiveStep}) => {
 
     return (
         <div className='w-full flex flex-col gap-11 text-white'>
-            <div className="w-full flex gap-4">
-                <div className="w-4/6 flex flex-col gap-7">
+            <div className="w-full flex flex-col-reverse sm:flex-row gap-4">
+                <div className="w-full sm:w-4/6 flex flex-col gap-7">
                     <div className="font-semibold">
                         <h3 className="text-h4 text-orange-400">Mohon Review Pesanan Anda</h3>
                         <p className="text-h6">Mohon periksa kembali pesanan Anda sebelum melanjutkan  pembayaran</p>
                     </div>
                     <div className="flex bg-card-bg font-semibold">
-                        <img src={studio} alt="studio image" className="w-[16.5rem] aspect-[1/0.9] rounded-[1.25rem]" />
-                        <div className="flex-1 flex flex-col bg-yellow-400 rounded-[1.25rem] px-6 py-3 text-dark">
+                        <img src={studio} alt="studio image" className="hidden sm:block w-[16.5rem] aspect-[1/0.9] rounded-[1.25rem]" />
+                        <div className="w-full sm:flex-1 flex flex-col bg-card-bg rounded-[1.25rem] px-6 py-3 text-white border-orange-500 border-[1px]">
                             <h4 className="text-h4">Room Deluxe</h4>
                             <p className="text-h6">Recording Room</p>
-                            <div className="w-full h-1 bg-dark rounded-full" />
-                            <div className="flex flex-col gap-3 justify-center flex-1 font-bold">
+                            <div className="w-full h-1 bg-white rounded-full" />
+                            <div className="flex flex-col gap-3 justify-center flex-1 font-bold mt-4">
                                 <div className="flex gap-[4.75rem]">
                                     Check-in
                                     <span>Sun, 5 Mar 2023, 15:00</span>
@@ -39,14 +39,14 @@ const Review = ({setActiveStep}) => {
                         </div>
                     </div>
                 </div>
-                <div className="flex-1 bg-card-bg rounded-[1.25rem] px-9 pt-7">
+                <div className="flex-1 flex flex-row justify-between sm:flex-col bg-card-bg rounded-[1.25rem] px-9 py-7">
                     <div className="flex flex-col gap-3">
                         <h5 className="text-h6 font-semibold text-orange-500">Detil Kontak</h5>
                         <span>daniel andrew</span>
                         <span>+62812345678</span>
                         <span>daniel123@gmail.com</span>
                     </div>
-                    <div className="flex flex-col gap-3 mt-5">
+                    <div className="flex flex-col gap-3 sm:mt-5">
                         <h5 className="text-h6 font-semibold text-orange-500">Detil Tamu</h5>
                         <span>{buyerData.contactName}</span>
                         <span>{buyerData.contactPhoneNum}</span>
@@ -58,7 +58,7 @@ const Review = ({setActiveStep}) => {
                 <h4 className="text-h5 font-semibold text-orange-400">My Wallets</h4>
                 <p className="text-h6 font-semibold">Current Wallet Balance : Rp 150 000</p>
             </div>
-            <div className="text-white w-4/6">
+            <div className="text-white w-full sm:w-4/6">
                 <div className="text-h6 font-semibold">
                     <h4 className="text-h5 font-semibold text-orange-400">Perincian Harga</h4>
                     <div className="mt-10 flex flex-col gap-3">

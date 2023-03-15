@@ -4,7 +4,7 @@ import { logo } from "@/assets/image"
 
 const BackNav = () => {
     return (
-        <div className="flex justify-between items-center mt-14 relative mb-7">
+        <div className="flex justify-between items-center mt-14 relative mb-20">
             <NavLink to={-1} className="flex text-h5 font-bold gap-2 items-center text-white">
                 <IoIosArrowBack />
                 BACK
