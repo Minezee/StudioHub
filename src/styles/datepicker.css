@@ -1,0 +1,48 @@
+/* Custom MUI Datepicker */
+.MuiDateCalendar-root *{
+    @apply !text-light-txt
+}
+
+.MuiDateCalendar-root span{
+    @apply !text-b1
+}
+
+.MuiPaper-root div{
+    @apply bg-dark
+}
+
+.MuiPaper-root button{
+    @apply !text-light-txt !bg-transparent !text-b1 hover:!bg-card-bg
+}
+
+.MuiFormControl-root *{
+    @apply !border-none !text-light-txt !text-lg placeholder:!text-light-txt placeholder:!opacity-100
+}
+
+.MuiFormControl-root svg{
+    @apply !text-2xl
+}
+
+.MuiButtonBase-root-{
+    @apply !bg-card-bg
+}
+
+.MuiDialogActions-root{
+    @apply !justify-between
+}
+
+.MuiPopper-root div{
+    @apply rounded-[1.25rem]
+}
+
+.MuiDialogContent-root:first-of-type{
+    @apply !bg-dark
+}
+
+.MuiDialogContent-root:first-of-type *{
+    @apply !text-light-txt bg-transparent
+}
+
+.MuiDialogContent-root:first-of-type button{
+    @apply !text-b1
+}

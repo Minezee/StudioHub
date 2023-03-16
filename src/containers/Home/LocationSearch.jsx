@@ -6,8 +6,7 @@ import { RadioGroup } from "@headlessui/react"
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { makeStyles } from '@mui/material';
-import { color } from '@mui/system';
+import "@/styles/datepicker.css"
 
 const province = [
     {
