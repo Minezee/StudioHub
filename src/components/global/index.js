@@ -8,6 +8,7 @@ import DetailHeader from "./DetailHeader";
 import DisplayImage from "./DisplayImage";
 import Ratings from "./Ratings";
 import CommentSection from "./CommentSection";
+import Pagination from "./Pagination";
 
 export {
     Card,
@@ -20,4 +21,5 @@ export {
     DisplayImage,
     Ratings,
     CommentSection,
+    Pagination,
 }

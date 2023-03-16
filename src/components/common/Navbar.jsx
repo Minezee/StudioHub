@@ -29,9 +29,8 @@ const navMenu = [
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { token, userData } = useContext(AppContext);
+    const { userData, updateUserData } = useContext(AppContext);
     const navigate = useNavigate();
-    console.log(userData)
 
     // prevent user scrolling when open navigation on mobile
     useEffect(() => {
@@ -46,6 +45,7 @@ const Navbar = () => {
         Cookies.remove("auth_token");
         sessionStorage.removeItem("auth_token");
         sessionStorage.removeItem("isPayment");
+        updateUserData(null)
         navigate('/login')
     }
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                         <Link key={menu.name} to={menu.direct}>{menu.name}</Link>
                     ))}
                 </nav>
-                {userData ?
+                {userData.id ?
                     <div className="relative group">
                         <div className="flex items-center gap-2 text-h6 font-bold">
                             Welcome, {userData.name}
@@ -97,7 +97,7 @@ const Navbar = () => {
                         {navMenu.map((menu) => (
                             <NavLink key={menu.name} onClick={() => setIsOpen(false)} to={menu.direct}>{menu.name}</NavLink>
                         ))}
-                        {token ?
+                        {userData.id ?
                             <>
                                 <NavLink onClick={() => setIsOpen(false)} to={'/profile'}>Profile</NavLink>
                                 <NavLink onClick={() => setIsOpen(false)} to={'/'}>History</NavLink>
@@ -105,10 +105,10 @@ const Navbar = () => {
                             :
                             null}
                     </nav>
-                    {token ?
-                        <button onClick={handleLogout} className="bg-yellow-400 px-6 py-3 font-bold rounded-lg text-dark text-3xl">Logout</button>
+                    {userData.id ?
+                        <button onClick={handleLogout} className="bg-primary-color px-6 py-3 font-bold rounded-lg text-dark text-3xl">Logout</button>
                         :
-                        <NavLink to={"/login"} className="bg-yellow-400 px-6 py-3 font-bold rounded-lg text-dark text-3xl">Login</NavLink>
+                        <NavLink to={"/login"} className="bg-primary-color px-6 py-3 font-bold rounded-lg text-dark text-3xl">Login</NavLink>
                     }
                 </div>
             </div>
