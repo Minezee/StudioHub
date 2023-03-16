@@ -43,50 +43,50 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* Custom Calendar */
-.css-cwhad8-MuiDateCalendar-root *{
+.MuiDateCalendar-root *{
     @apply !text-light-txt
 }
 
-.css-cwhad8-MuiDateCalendar-root span{
+.MuiDateCalendar-root span{
     @apply !text-b1
 }
 
-.css-1yllih9-MuiPaper-root-MuiPickersPopper-paper div{
+.MuiPaper-root div{
     @apply bg-dark
 }
 
-.css-1yllih9-MuiPaper-root-MuiPickersPopper-paper button{
+.MuiPaper-root button{
     @apply !text-light-txt !bg-transparent !text-b1 hover:!bg-card-bg
 }
 
-.css-1u3bzj6-MuiFormControl-root-MuiTextField-root *{
+.MuiFormControl-root *{
     @apply !border-none !text-light-txt !text-lg placeholder:!text-light-txt placeholder:!opacity-100
 }
 
-.css-1u3bzj6-MuiFormControl-root-MuiTextField-root svg{
+.MuiFormControl-root svg{
     @apply !text-2xl
 }
 
-.css-156tkzh-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{
+.MuiButtonBase-root-{
     @apply !bg-card-bg
 }
 
-.css-hlj6pa-MuiDialogActions-root{
+.MuiDialogActions-root{
     @apply !justify-between
 }
 
-.css-1anqmj6-MuiPopper-root-MuiPickersPopper-root div{
+.MuiPopper-root div{
     @apply rounded-[1.25rem]
 }
 
-.css-9yjdhh-MuiDialogContent-root:first-of-type{
+.MuiDialogContent-root:first-of-type{
     @apply !bg-dark
 }
 
-.css-9yjdhh-MuiDialogContent-root:first-of-type *{
+.MuiDialogContent-root:first-of-type *{
     @apply !text-light-txt bg-transparent
 }
 
-.css-9yjdhh-MuiDialogContent-root:first-of-type button{
+.MuiDialogContent-root:first-of-type button{
     @apply !text-b1
 }
