@@ -5,11 +5,11 @@ import { logo } from "@/assets/image"
 const BackNav = () => {
     return (
         <div className="flex justify-between items-center mt-14 relative mb-20">
-            <NavLink to={-1} className="flex text-h5 font-bold gap-2 items-center text-white">
+            <NavLink title="Back" to={-1} className="flex text-h5 font-bold gap-2 items-center text-white">
                 <IoIosArrowBack />
                 BACK
             </NavLink>
-            <NavLink to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
+            <NavLink title="Back to home" to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
                 <img src={logo} alt="logo" className="w-7" />
                 STUDIO HUB
             </NavLink>

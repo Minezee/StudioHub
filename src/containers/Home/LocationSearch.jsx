@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dropdown } from '@/components/global';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
@@ -58,13 +58,8 @@ const LocationSearch = ({ feature }) => {
     const [selectedMenu, setSelectedMenu] = useState("Studio");
     const [selectedProvince, setSelectedProvince] = useState(province[0])
     const [selectedCity, setSelectedCity] = useState(selectedProvince.city[0])
-    const [startDate, setStartDate] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState('');
     const navigate = useNavigate();
-
-    const handleValueChange = (newValue) => {
-        console.log("newValue:", newValue);
-        setValue(newValue);
-    }
 
     function handleProvinceChange(selectedProvince) {
         setSelectedProvince(selectedProvince);
@@ -73,7 +68,7 @@ const LocationSearch = ({ feature }) => {
 
     function handleSubmit(e) {
         e.preventDefault()
-        navigate(`/${selectedMenu.toLowerCase()}?&province=${selectedProvince.name.toLowerCase()}&city=${selectedCity.name.toLowerCase()}&date=${"27 april 2023"}`)
+        navigate(`/${selectedMenu.toLowerCase()}?&province=${selectedProvince.name.toLowerCase()}&city=${selectedCity.name.toLowerCase()}&date=${selectedDate.format('DD-MM-YYYY')}`)
     }
 
     return (
@@ -110,6 +105,8 @@ const LocationSearch = ({ feature }) => {
                                     orientation='portrait'
                                     className='rounded-xl !bg-dark !mt-3 !text-light-txt'
                                     format='DD/MM/YYYY'
+                                    value={selectedDate}
+                                    onChange={setSelectedDate}
                                     slotProps={{
                                         actionBar: {
                                             actions: ['clear', 'today'],

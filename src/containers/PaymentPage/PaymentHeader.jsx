@@ -15,7 +15,7 @@ const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {
     
     return (
         <div className="flex justify-between items-center mt-14 relative mb-7">
-            <button onClick={handleClick} className="flex text-h6 sm:text-h5 font-bold gap-2 items-center text-white">
+            <button title="Back" onClick={handleClick} className="flex text-h6 sm:text-h5 font-bold gap-2 items-center text-white">
                 <IoIosArrowBack />
                 BACK
             </button>
@@ -41,7 +41,7 @@ const PaymentHeader = ({ steps, activeStep, setActiveStep }) => {
                     }
                 })}
             </div>
-            <NavLink to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
+            <NavLink title="Back to home" to={'/'} className="flex text-h4 font-bold gap-2 items-center text-yellow-500">
                 <img src={logo} alt="logo" className="w-7" />
                 <span className="hidden sm:block">STUDIO HUB</span>
             </NavLink>
