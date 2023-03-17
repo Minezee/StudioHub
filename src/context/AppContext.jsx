@@ -44,6 +44,7 @@ export const AppProvider = ({ children }) => {
             : {
                 id: null,
                 name: null,
+                photo: null,
                 username: null,
                 email: null,
                 phoneNum: null,
@@ -63,8 +64,9 @@ export const AppProvider = ({ children }) => {
                     updateUserData({
                         id: res.ID,
                         email: res.email,
-                        name: res.username,
-                        phoneNum: null,
+                        photo: res.picture,
+                        name: res.name || res.username,
+                        phoneNum: res.phoneNumber,
                         balance: 100000,
                     })
                 })
