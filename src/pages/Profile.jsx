@@ -96,7 +96,7 @@ const Profile = () => {
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="text-dark" />
+                      className="text-white bg-dark border-orange-500 border-[1px] pl-2 py-1 rounded-md" />
                     :
                     <>
                       <p>{name}</p>
@@ -111,7 +111,7 @@ const Profile = () => {
                       type="tel"
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
-                      className="text-dark" />
+                      className="text-white bg-dark border-orange-500 border-[1px] pl-2 py-1 rounded-md"/>
                     :
                     <>
                       {userData.phoneNum && <p>{phoneNumber}</p>}
