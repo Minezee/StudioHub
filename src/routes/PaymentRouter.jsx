@@ -1,4 +1,5 @@
 import { Outlet, Navigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const PaymentRouter = () => {
     const isPayment = sessionStorage.getItem('isPayment');
