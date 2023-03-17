@@ -49,7 +49,7 @@ const Navbar = () => {
                     <div className="relative group">
                         <div className="flex items-center gap-2 text-h6 font-bold">
                             Welcome, {userData.username}
-                            <img src={userData.photo} alt="photo profile" className="h-11 w-11 rounded-full"/>
+                            <img src={userData.photo} alt="photo profile" className="h-11 w-11 rounded-full object-cover"/>
                         </div>
                         <div className="absolute group-hover:block top-10 z-50 w-full hidden pt-7 py-5">
                             <div className="bg-yellow-500 flex flex-col items-center font-bold justify-center text-center rounded-lg">

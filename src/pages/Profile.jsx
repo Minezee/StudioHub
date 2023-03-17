@@ -68,7 +68,7 @@ const Profile = () => {
         <div className="mt-10 flex justify-between">
           <form onSubmit={handleSubmit}>
             <div className="flex items-center gap-3">
-              <img src={picture} alt="photo" className="h-24 w-24 rounded-full" />
+              <img src={picture} alt="photo" className="h-24 w-24 rounded-full object-cover" />
               <div>
                 <h3 className="text-h5">{userData.username}</h3>
                 <button type="button" onClick={handleProfileButtonClick} className={`text-h6 ${styles.link}`}>Change Profile</button>
