@@ -6,6 +6,7 @@ import RentList from "./RentList"
 import EventList from "./EventList"
 import StudioInformation from "./StudioInformation"
 import RentInformation from "./RentInformation"
+import EventInformation from "./EventInformation"
 import Payment from "./Payment"
 import History from "./History"
 import Profile from "./Profile"
@@ -25,6 +26,7 @@ export {
     EventList,
     StudioInformation,
     RentInformation,
+    EventInformation,
     Payment,
     History,
     Profile,

@@ -16,6 +16,7 @@ import studio_facility from "./studio_facility.png"
 import userx_pp from "./userx_pp.png"
 import BNI from "./BNI.png"
 import dana from "./dana.png"
+import eventInfoBanner from "./eventInfoBanner.png"
 
 export {
     facebook,
@@ -36,4 +37,5 @@ export {
     userx_pp,
     BNI,
     dana,
+    eventInfoBanner,
 }

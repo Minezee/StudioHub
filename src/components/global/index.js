@@ -9,6 +9,7 @@ import DisplayImage from "./DisplayImage";
 import Ratings from "./Ratings";
 import CommentSection from "./CommentSection";
 import Pagination from "./Pagination";
+import StudioCard from "./StudioCard";
 
 export {
     Card,
@@ -22,4 +23,5 @@ export {
     Ratings,
     CommentSection,
     Pagination,
+    StudioCard,
 }

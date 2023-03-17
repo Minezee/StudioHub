@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 
 
@@ -17,12 +17,7 @@ const filterMenu = [
     }
 ]
 
-const Filter = () => {
-    const [selectedFilter, setSelectedFilter] = useState({
-        "Sort Results": null,
-        "Rating": null,
-        "Facilities": null
-    });
+const Filter = ({selectedFilter, setSelectedFilter}) => {
 
     const handleSelect = (title, value) => {
         setSelectedFilter(prevSelected => ({

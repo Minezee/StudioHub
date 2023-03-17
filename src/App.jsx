@@ -17,6 +17,7 @@ import {
   TopupConfirmation,
   TopupPayment,
   PaymentSuccess,
+  EventInformation,
 } from "./pages"
 import { useEffect } from 'react';
 import PaymentRouter from "./routes/PaymentRouter";
@@ -53,6 +54,7 @@ const App = () => {
             <Route path="/history" element={<History />} />
             <Route path='/studio/detail/:name' element={<StudioInformation />} />
             <Route path='/rent/detail/:name' element={<RentInformation />} />
+            <Route path='/Event/detail/:name' element={<EventInformation />} />
             <Route element={<PaymentRouter />}>
               <Route path="/:name/payment" element={<Payment />} />
             </Route>

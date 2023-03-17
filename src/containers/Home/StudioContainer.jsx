@@ -5,7 +5,7 @@ import "swiper/css";
 import { NavLink } from 'react-router-dom';
 
 const LargeCard = ({ data }) => (
-    <NavLink to="/" className="text-2xl flex flex-col gap-3 hover:opacity-90 hover:border-b-[1px] border-orange-500">
+    <NavLink to={`/studio/detail/Corner Music Studio ${data}`} className="text-2xl flex flex-col gap-3 hover:opacity-90 hover:border-b-[1px] border-orange-500">
         <div className='h-[15.25rem] rounded-xl'>
             <img src={display_studio} alt="" className='h-full w-full rounded-xl' />
         </div>
@@ -16,7 +16,7 @@ const LargeCard = ({ data }) => (
 )
 
 const SmallCard = ({ data }) => (
-    <NavLink>
+    <NavLink to={`/studio/detail/Corner Music Studio ${data}`}>
         <div className='h-[10.25rem] sm:h-[14rem] rounded-xl'>
             <img src={display_studio} alt="" className='h-full w-full rounded-xl' />
         </div>
