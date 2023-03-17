@@ -103,7 +103,7 @@ const LocationSearch = ({ feature }) => {
                             <LocalizationProvider dateAdapter={AdapterDayjs}>
                                 <DatePicker
                                     orientation='portrait'
-                                    className='rounded-xl !bg-dark !mt-3 !text-light-txt'
+                                    className='rounded-xl !bg-dark !mt-3 !text-light-txt hover:!bg-gray-900'
                                     format='DD/MM/YYYY'
                                     value={selectedDate}
                                     onChange={setSelectedDate}

@@ -4,11 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
-import { event_banner } from "@/assets/image";
+import { eventBanner } from "@/constants/eventBanner";
 import styles from "@/styles/Styles.module.css"
 
 const Slider = () => {
-    let arr = ["1", "2", "3", "4", "5", "6"]
     const swiperRef = useRef(null);
 
     const handleNextClick = () => {
@@ -46,10 +45,10 @@ const Slider = () => {
                     <BsArrowLeftShort className="m-2" />
                 </button>
                 {/* Slide */}
-                {arr.map(name => (
-                    <SwiperSlide key={name}>
+                {eventBanner.map(banner => (
+                    <SwiperSlide key={banner.name}>
                         <div className="aspect-[2.29299363057/1] w-full bg-gray-200">
-                            <img className="w-full h-full" src={event_banner} alt="" />
+                            <img className="w-full h-full" src={banner.img} alt="" />
                         </div>
                     </SwiperSlide>
                 ))}

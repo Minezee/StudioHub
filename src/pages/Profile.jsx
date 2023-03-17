@@ -137,7 +137,7 @@ const Profile = () => {
             </div>
           </form>
 
-          <div className="w-1/4">
+          <div className="w-96 xl:w-1/4">
             <h3 className="text-h5">Your Studio Hub Account</h3>
             <div className="bg-gray-footer font-bold px-6 py-7 rounded-lg">
               <div className="flex justify-between items-center">

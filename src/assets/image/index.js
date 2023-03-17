@@ -2,6 +2,8 @@ import facebook from "./facebook.png"
 import apple from "./apple.png"
 import google from "./google.png"
 import event_banner from "./event_banner.png"
+import banner2 from "./banner2.png"
+import banner3 from "./banner3.png"
 import logo_text from "./logo_text.png"
 import logo_footer from "./logo_footer.png"
 import display_studio from "./display_studio.png"
@@ -20,6 +22,8 @@ export {
     apple,
     google,
     event_banner,
+    banner2,
+    banner3,
     logo_text,
     logo_footer,
     display_studio,

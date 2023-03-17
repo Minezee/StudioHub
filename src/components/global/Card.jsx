@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 const Card = ({data}) => {
     return (
-        <Link to={`detail/${data.name.toLowerCase()}`} className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white border-[1px] border-orange-500">
+        <Link to={`detail/${data.name.toLowerCase()}`} className="bg-card-bg flex h-32 sm:h-[12.5rem] justify-between text-white border-[1px] border-orange-500 hover:opacity-80">
             <div className="flex items-center gap-5">
                 <div className="h-full aspect-square">
                     <img src={data.img} alt={data.name} className="w-full h-full" />
