@@ -14,6 +14,9 @@ import {
   Profile,
   TopupMenu,
   PaymentMethod,
+  TopupConfirmation,
+  TopupPayment,
+  PaymentSuccess,
 } from "./pages"
 import { useEffect } from 'react';
 import PaymentRouter from "./routes/PaymentRouter";
@@ -41,6 +44,9 @@ const App = () => {
             <Route path='/profile' element={<Profile />} />
             <Route path='/topup-menu' element={<TopupMenu />} />
             <Route path='/payment-method' element={<PaymentMethod />} />
+            <Route path='/topup-confirmation' element={<TopupConfirmation />} />
+            <Route path='/topup-payment' element={<TopupPayment />} />
+            <Route path='/payment-success' element={<PaymentSuccess />} />
             <Route path='/studio' element={<StudioList />} />
             <Route path='/rent' element={<RentList />} />
             <Route path='/event' element={<EventList />} />

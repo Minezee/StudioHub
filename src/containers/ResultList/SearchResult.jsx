@@ -1,4 +1,4 @@
-import { SortBy, Card, ResultHeader, Filter } from "@/components/global"
+import { SortBy, Card, ResultHeader, Filter, Pagination } from "@/components/global"
 import { eventList } from "@/constants/eventList";
 import { rentList } from "@/constants/rentList";
 import { studioList } from "@/constants/studioList";
@@ -27,7 +27,7 @@ const SearchResult = ({ result }) => {
                             <Card key={data.name + index} data={data}/>
                         ))}
                     </div>
-
+                    <Pagination />
                 </div>
             </div>
         </>

@@ -32,7 +32,8 @@ const LoginForm = () => {
                 }
 
                 updateUserData({
-                    id: 2
+                    id: 2,
+                    username: data.username,
                 })
 
                 if(sessionStorage.isPayment){

@@ -29,8 +29,9 @@ const navMenu = [
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { userData, updateUserData } = useContext(AppContext);
+    const { userData } = useContext(AppContext);
     const navigate = useNavigate();
+    const token = Cookies.get('auth_token') || sessionStorage.getItem('auth_token');
 
     // prevent user scrolling when open navigation on mobile
     useEffect(() => {
@@ -45,7 +46,7 @@ const Navbar = () => {
         Cookies.remove("auth_token");
         sessionStorage.removeItem("auth_token");
         sessionStorage.removeItem("isPayment");
-        updateUserData(null)
+        localStorage.removeItem("userData")
         navigate('/login')
     }
 
@@ -62,10 +63,10 @@ const Navbar = () => {
                         <Link key={menu.name} to={menu.direct}>{menu.name}</Link>
                     ))}
                 </nav>
-                {userData.id ?
+                {token ?
                     <div className="relative group">
                         <div className="flex items-center gap-2 text-h6 font-bold">
-                            Welcome, {userData.name}
+                            Welcome, {userData.username}
                             <div className="bg-gray-200 h-11 w-11 rounded-full"></div>
                         </div>
                         <div className="absolute group-hover:block top-10 z-50 w-full hidden pt-7 py-5">

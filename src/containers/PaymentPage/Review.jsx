@@ -2,7 +2,6 @@ import styles from "@/styles/Styles.module.css"
 import { useContext } from "react"
 import { AppContext } from "@/context/AppContext"
 import { studio } from "@/assets/image";
-import { mandiri, BCA, BSI, BNI, livin } from "@/assets/image";
 import { Link } from "react-router-dom";
 
 const Review = ({setActiveStep}) => {

@@ -1,9 +1,8 @@
 import { Outlet, Navigate } from 'react-router-dom';
-import { AppContext } from '@/context/AppContext';
-import { useContext } from 'react';
+import Cookies from 'js-cookie';
 
 const AuthRoutes = () => {
-    const { token } = useContext(AppContext);
+    const token = Cookies.get('auth_token') || sessionStorage.getItem('auth_token')
 
     return (
         token ? 

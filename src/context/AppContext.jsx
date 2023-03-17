@@ -6,11 +6,7 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
 
-    var token;
-
-    useEffect(() => {
-        token = Cookies.get('auth_token') || sessionStorage.getItem('auth_token');
-    }, [Cookies.get('auth_token'), sessionStorage.getItem('auth_token')])
+    const token = Cookies.get('auth_token') || sessionStorage.getItem('auth_token');
 
     const [buyerData, setBuyerData] = useState({
         contactName: null,
@@ -57,27 +53,24 @@ export const AppProvider = ({ children }) => {
 
     useEffect(() => {
         if (token && userData.id) {
-            axiosInstance.get(`user/${userData.id}`)
-                .then(res => res?.data?.data)
+            axiosInstance.get(`validate`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                }
+            })
+                .then(res => res?.data?.message)
                 .then(res => {
                     updateUserData({
-                        name: res.username,
-                        username: res.username,
+                        id: res.ID,
                         email: res.email,
+                        name: res.username,
                         phoneNum: null,
                         balance: 100000,
                     })
                 })
                 .catch(err => console.log(err))
         } else {
-            setUserData({
-                id: null,
-                name: null,
-                username: null,
-                email: null,
-                phoneNum: null,
-                balance: null,
-            })
+            localStorage.removeItem("userData")
         }
     }, [Cookies.get('auth_token'), sessionStorage.getItem('auth_token')])
 
@@ -91,7 +84,7 @@ export const AppProvider = ({ children }) => {
 
     return (
         <AppContext.Provider
-            value={{ token, buyerData, updateBuyerData, filterData, updateFilterData, userData, updateUserData }}>
+            value={{ buyerData, updateBuyerData, filterData, updateFilterData, userData, updateUserData }}>
             {children}
         </AppContext.Provider>
     );
